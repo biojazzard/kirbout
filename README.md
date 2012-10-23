@@ -73,4 +73,9 @@ Yes, you can use Markdown here also, as every where in the *.txt*
 And of course don´t forget to close it: *&#45;&#45;&#45;&#45;* !!!
 * * *
 
-Based on [kinoutJS](https://github.com/soyjavi/Kinout) by [Javier Jiménez Villar](https://github.com/soyjavi) and [kirby](https://github.com/bastianallgeier/kirbycms) by [Bastian Allgeier](https://github.com/bastianallgeier)
+##### Glued by [@biojazzard](https://github.com/biojazzard)
+
+*All credits should go to:*
+
++[kinoutJS](https://github.com/soyjavi/Kinout) by [Javier Jiménez Villar](https://github.com/soyjavi)
++[kirby](https://github.com/bastianallgeier/kirbycms) by [Bastian Allgeier](https://github.com/bastianallgeier)
