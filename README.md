@@ -22,7 +22,7 @@ I believe in this kind of sinergy...
 
 #Howto
 
-## 1.-Download [kirbout](https://github.com/biojazzard/KirbOut) and put it some where in your server.
+## 1.-Download [kirbout](https://github.com/biojazzard/kirbout) and put it some where in your server.
 You need a web server (of your choice) with PHP > 5.3.
 * * *
 ## 2.-Check whats going on in the */content* folder.
