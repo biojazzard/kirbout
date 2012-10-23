@@ -40,10 +40,10 @@ Ex: *02-whenever-a, 02-whenever-b, 02-whenever-c...*
 So, let´s see what we find here:
 
 ### Minimal Config (Only Content)
-    Text:
-    &#35;&#35; Some
-    &#42;&#42; nice&#42;&#42; &#91;Markdown&#93;&#40;http://daringfireball.net/projects/markdown/&#41;
-    &#45;&#45;&#45;&#45;
+```Text:
+** Some **
+## nice ## [Markdown](http://daringfireball.net/projects/markdown/)
+----```
 * * *
 Basically, Markdown Tags between the *Text:* and the closing *&#45;&#45;&#45;&#45;*.
 * * *
@@ -52,21 +52,22 @@ Let´s go for more:
 
 ### Extra Config (Header and/or Footer)
 You can easily add headers and footers per slide, adding the *Header:* and *Footer:*
-    Header:
-    &#42;&#42; Header Header
-    &#45;&#45;&#45;&#45;
-    Footer:
-    &#42;&#42; Cool Footer
-    &#45;&#45;&#45;&#45;
+```Header:
+** Cool Header
+----
+Footer:
+** Cool Footer
+----```
 * * *
 Don´t forget to close them: *&#45;&#45;&#45;&#45;* !!!
+* * *
 ## 6.-Edit the *.txt* files
 And finally, the Title. tag.
 ### Title Config
 Adding a title to the slide is not necesary, as the slide will take it´s file name.
 But maybe we want a "Real Title" instead of a "real-title"... So we add:
-    Title: &#42;&#42;Real Title
-    &#45;&#45;&#45;&#45;
+```Title: &#42;&#42;Real Title
+----```
 * * *
 Yes, you can use Markdown here also, as every where in the *.txt*
 And of course don´t forget to close it: *&#45;&#45;&#45;&#45;* !!!
