@@ -1,12 +1,12 @@
-# kirb*out* 
+# kirb* out* 
 ## This is a Mashup by [@biojazzard](https://twitter.com/biojazzard)
 
-# kirb*out* 
+# kirb* out* 
 #### kinout*JS* & kirby living together
 [not a marriage, but who knows...]
 * * *
 
-## [kinout*JS*](https://github.com/soyjavi/Kinout)
+## [kinoutJS](https://github.com/soyjavi/Kinout)
 #### HTML5-based Keynote System
 Kinout*JS* is awesome, period.
 But I tought it was nice to have a content manager.
