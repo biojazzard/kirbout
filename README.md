@@ -40,10 +40,10 @@ Ex: *02-whenever-a, 02-whenever-b, 02-whenever-c...*
 So, let´s see what we find here:
 
 ### Minimal Config (Only Content)
-```Text:
+<pre>Text:
 ** Some **
 ## nice ## [Markdown](http://daringfireball.net/projects/markdown/)
-----```
+----</pre>
 * * *
 Basically, Markdown Tags between the *Text:* and the closing *&#45;&#45;&#45;&#45;*.
 * * *
@@ -52,12 +52,12 @@ Let´s go for more:
 
 ### Extra Config (Header and/or Footer)
 You can easily add headers and footers per slide, adding the *Header:* and *Footer:*
-```Header:
+<pre>Header:
 ** Cool Header
 ----
 Footer:
 ** Cool Footer
-----```
+----</pre>
 * * *
 Don´t forget to close them: *&#45;&#45;&#45;&#45;* !!!
 * * *
@@ -66,8 +66,8 @@ And finally, the Title. tag.
 ### Title Config
 Adding a title to the slide is not necesary, as the slide will take it´s file name.
 But maybe we want a "Real Title" instead of a "real-title"... So we add:
-```Title: &#42;&#42;Real Title
-----```
+<pre>Title: &#42;&#42;Real Title
+----</pre>
 * * *
 Yes, you can use Markdown here also, as every where in the *.txt*
 And of course don´t forget to close it: *&#45;&#45;&#45;&#45;* !!!
