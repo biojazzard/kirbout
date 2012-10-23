@@ -1,0 +1,26 @@
+Title: Howto kirb*out* {#arrow-icon}
+----
+Text:
+###### 1.-Download [kirb*out*](https://github.com/biojazzard/KirbOut) and put it some where in your server.
+You need a web server (of your choice) with PHP > 5.3.
+* * *
+###### 2.-Check whats going on in the */content* folder.
+You can find all TEH Sildes content there.
+In the first level, you´ll find the Main slides: Use the *Left* & *Right* arrows to navigate.
+Main slides may have children: Use the *Up* & *Down* arrows to navigate.
+* * *
+###### 3.-Folder names
+For Main slides:
+Ex: *01-whatever, 02-whenever...*
+For Secondary (children) slides: Add a letter suffix.
+Ex: *02-whenever-a, 02-whenever-b, 02-whenever-c...*
+* * *
+#### So now PRESS the *Down* Button
+----
+Header:
+Mashup by [@biojazzard](https://github.com/biojazzard)
+----
+Footer:
+#### kinout*JS* & kirby living together
+Based on [kinoutJS](https://github.com/soyjavi/Kinout) by [Javier Jiménez Villar](https://github.com/soyjavi) and [kirby](https://github.com/bastianallgeier/kirbycms) by [Bastian Allgeier](https://github.com/bastianallgeier)
+----
