@@ -1,7 +1,7 @@
-# kirb* out* 
+# kirbout 
 ## This is a Mashup by [@biojazzard](https://twitter.com/biojazzard)
 
-# kirb* out* 
+# kirbout 
 #### kinout*JS* & kirby living together
 [not a marriage, but who knows...]
 * * *
@@ -15,14 +15,14 @@ But I tought it was nice to have a content manager.
 CMS based on Markdown. Text files in folders. Uses PHP. Extremely easy.
 Kirby is also awesome, but I tought it was nice to have a better display.
 ### =
-## [kirb*out*](https://github.com/biojazzard/kirbout)
+## [kirbout](https://github.com/biojazzard/kirbout)
 That´s what you get: a very nice HTML5 Keynote System based on Markdown files served with PHP.
-#####kirb*out* has to be awesome!!!
+#####kirbout has to be awesome!!!
 I believe in this kind of sinergy...
 
 #Howto
 
-## 1.-Download [kirb*out*](https://github.com/biojazzard/KirbOut) and put it some where in your server.
+## 1.-Download [kirbout](https://github.com/biojazzard/KirbOut) and put it some where in your server.
 You need a web server (of your choice) with PHP > 5.3.
 * * *
 ## 2.-Check whats going on in the */content* folder.
