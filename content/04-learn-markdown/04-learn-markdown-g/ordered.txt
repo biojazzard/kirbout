@@ -1,12 +1,16 @@
 Title: Learn kirb*out*
 ----
 Text:
-###### 4.- Images
-Inline Images *&lt;img&gt*;
-<pre>
-&#33;&#91;Alt Text &#93;&#40;/path/file.img&#41;
-renders as->
-&lt;img src="/path/file.img" alt="Alt Text"&gt;
+###### 7.- Lists
+Ordered lists *&lt;ol&gt;*
+<pre>*Ordered*
+1. item 1
+2. item 2
+renders as ->
+&lt;ol&gt;
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;item 2&lt;/li&gt;
+&lt;/ol&gt;
 </pre>
 ###### *Up* & *Down* Button Availiable
 ----
