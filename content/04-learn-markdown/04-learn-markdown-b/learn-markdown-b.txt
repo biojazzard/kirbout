@@ -1,0 +1,20 @@
+Title: Learn kirb*out*
+----
+Text:
+###### 8.-Learn Markdown the *.txt* files
+So, let´s see what we find here:
+
+###### Minimal Config (Only Content)
+<pre>_ THIS IS EM _</pre>
+* * *
+All you need to know: [Daring Fireball: Markdown](http://daringfireball.net/projects/markdown/)
+* * *
+##### *Up* the *Down* Button Availiable
+----
+Header:
+Mashup by [@biojazzard](https://github.com/biojazzard)
+----
+Footer:
+#### kinout*JS* & kirby living together
+Based on [kinoutJS](https://github.com/soyjavi/Kinout) by [Javier Jiménez Villar](https://github.com/soyjavi) and [kirby](https://github.com/bastianallgeier/kirbycms) by [Bastian Allgeier](https://github.com/bastianallgeier)
+----

@@ -9,7 +9,7 @@ You can find all TEH Sildes content there.
 In the first level, you´ll find the Main slides: Use the *Left* & *Right* arrows to navigate.
 Main slides may have children: Use the *Up* & *Down* arrows to navigate.
 * * *
-###### 3.-Folder names
+###### 3.-Folder names (*.txt names are not used)
 For Main slides:
 Ex: *01-whatever, 02-whenever...*
 For Secondary (children) slides: Add a letter suffix.

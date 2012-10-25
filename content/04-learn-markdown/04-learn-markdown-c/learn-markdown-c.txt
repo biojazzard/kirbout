@@ -12,7 +12,7 @@ But maybe we want a "Real Title" instead of a "real-title"... So we add:
 Yes, you can use Markdown here also, as every where in the *.txt*
 And of course don´t forget to close it: *&#45;&#45;&#45;&#45;* !!!
 * * *
-#### Now you canPRESS the *Right* Button
+#### PRESS the *Right* Button
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)
