@@ -1,7 +1,7 @@
 # kirbout 
 ## This is a Mashup by [@biojazzard](https://twitter.com/biojazzard)
 
-# kirbout 
+# kirbout [Demo](http://biojazzard.github.com/kirbout/)
 #### kinoutJS & kirby living together
 [not a marriage, but who knows...]
 * * *
