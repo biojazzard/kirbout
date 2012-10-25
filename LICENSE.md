@@ -1,5 +1,5 @@
-# kirb*out* 
-# License
+# kirbout 
+## License
 
 Based on Their respective licenses:
 

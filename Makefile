@@ -7,16 +7,24 @@ LESS_COMPRESSOR ?= `which lessc`
 UGLIFY_JS ?= `which uglifyjs`
 WATCHR ?= `which watchr`
 
+#Bower
+CMP=./components/
+
 #QUO Related paths
-CMP=./components/QuoJS/
-QUO_SRC=src/
+QUO_SRC=QuoJS/src/
 QUO_BUILD=build/
+QUO_NAMESPACE=quo.
+
 COMPILER=vendor/google-compiler/compiler.jar
 LUNGO_SOURCES=./js/
-LUNGO_NAMESPACE=quo.
 BUILDPATH=../package/
 MINIFIED="min"
 PACKED="packed"
+
+#KINOUT Related paths
+KINOUT_SRC=Kinout/src/
+KINOUT_BUILD=build/
+KINOUT_NAMESPACE=Kinout.
 
 HR = ###############___________________###################
 
@@ -53,8 +61,16 @@ watch:
 quo:
 	@echo "========= START ============ QUOJS COMPILER w/ Uglify ============================"
 
-	cat ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}core.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}element.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}environment.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}output.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}query.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}style.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}ajax.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}events.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}events.manager.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}events.gestures.js > ./js/quo.js
+	cat ${CMP}${QUO_SRC}${QUO_BUILD}${QUO_NAMESPACE}core.js ${CMP}${QUO_SRC}${QUO_BUILD}${QUO_NAMESPACE}element.js ${CMP}${QUO_SRC}${QUO_BUILD}${QUO_NAMESPACE}environment.js ${CMP}${QUO_SRC}${QUO_BUILD}${QUO_NAMESPACE}output.js ${CMP}${QUO_SRC}${QUO_BUILD}${QUO_NAMESPACE}query.js ${CMP}${QUO_SRC}${QUO_BUILD}${QUO_NAMESPACE}style.js ${CMP}${QUO_SRC}${QUO_BUILD}${QUO_NAMESPACE}ajax.js ${CMP}${QUO_SRC}${QUO_BUILD}${QUO_NAMESPACE}events.js ${CMP}${QUO_SRC}${QUO_BUILD}${QUO_NAMESPACE}events.manager.js ${CMP}${QUO_SRC}${QUO_BUILD}${QUO_NAMESPACE}events.gestures.js > ./js/quo.js
 	uglifyjs -nc ./js/quo.js > ./js/quo.min.js
 
 	@echo "============================ QUOJS COMPILER w/ Uglify =========== END ============"
+
+kinout:
+	@echo "========= START ============ KinOut COMPILER w/ Uglify ============================"
+
+	#cat ${CMP}${KINOUT_SRC}${KINOUT_BUILD}${KINOUT_NAMESPACE}core.js > ./js/kinout.js
+	#uglifyjs -nc ./js/kinout.js > ./js/kinout.min.js
+
+	@echo "============================ KinOut COMPILER w/ Uglify =========== END ============"
 

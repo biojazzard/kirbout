@@ -1,0 +1,21 @@
+Title: Learn kirb*out*
+----
+Text:
+###### 5.- Links
+Links & Anchor tags *&lt;a&gt*;
+<pre>w/ Titile Tag
+This is &#91;an example&#93;&#40;http://example.com/ "Example"&#41; inline link.
+renders as-> &lt;a href="http://example.com/" title="Example"&gt;an example&lt;/a&gt;
+Simple
+&#91;This link&#93;&#40;http://example.net/&#41; has no title attribute.
+renders as-> &lt;a href="http://example.com/"&gt;This link&lt;/a&gt;
+</pre>
+###### *Up* & *Down* Button Availiable
+----
+Header:
+Mashup by [@biojazzard](https://github.com/biojazzard)
+----
+Footer:
+#### kinout*JS* & kirby living together
+Based on [kinoutJS](https://github.com/soyjavi/Kinout) by [Javier Jiménez Villar](https://github.com/soyjavi) and [kirby](https://github.com/bastianallgeier/kirbycms) by [Bastian Allgeier](https://github.com/bastianallgeier)
+----

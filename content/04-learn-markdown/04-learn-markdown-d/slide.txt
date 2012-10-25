@@ -1,15 +1,14 @@
 Title: Learn kirb*out*
 ----
 Text:
-###### 8.-Learn Markdown the *.txt* files
-So, let´s see what we find here:
-
-###### Minimal Config (Only Content)
-<pre>_ THIS IS EM _</pre>
-* * *
-All you need to know: [Daring Fireball: Markdown](http://daringfireball.net/projects/markdown/)
-* * *
-##### *Up* the *Down* Button Availiable
+###### 4.- Images
+Inline Images *&lt;img&gt*;
+<pre>
+&#33;&#91;Alt Text &#93;&#40;/path/file.img&#41;
+renders as->
+&lt;img src="/path/file.img" alt="Alt Text"&gt;
+</pre>
+###### *Up* & *Down* Button Availiable
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

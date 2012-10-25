@@ -1,15 +1,18 @@
 Title: Learn kirb*out*
 ----
 Text:
-###### 7.-Learn Markdown the *.txt* files
-So, let´s see what we find here:
+###### 3.- Basic Formats
+Paragraphs
+<pre>
+Triggered by a carriage return
+</pre>
 
-###### Minimal Config (Only Content)
-<pre>* THIS IS BOLD *</pre>
-* * *
-All you need to know: [Daring Fireball: Markdown](http://daringfireball.net/projects/markdown/)
-* * *
-##### *Up* the *Down* Button Availiable
+Quoting
+<pre>
+&gt;    This is the first level of quoting.
+&gt;&nbsp;&gt;        This is nested blockquote.
+</pre>
+###### *Up* & *Down* Button Availiable
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)
