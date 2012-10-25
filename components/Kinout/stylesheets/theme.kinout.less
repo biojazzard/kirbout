@@ -1,0 +1,31 @@
+@import "mixins.less";
+@import "variables.less";
+@import url("http://fonts.googleapis.com/css?family=Comfortaa:400,700");
+
+.kinout {
+    font-family: 'Comfortaa';
+    background: #652E8F url("../image/bg-default.png");
+    color: @white;
+    .text-shadow(0px 1px 0px rgba(0,0,0,0.5));
+
+    & mark { color: #FFC507; }
+
+    & progress span {
+        background: #FFC507;
+    }
+
+    & h1 { .text-shadow(0px 10px 10px rgba(0,0,0,0.5)); }
+    & h2 { .text-shadow(0px 8px 8px rgba(0,0,0,0.5)); }
+    & h3 { .text-shadow(0px 6px 6px rgba(0,0,0,0.5)); }
+    & h4 { .text-shadow(0px 4px 4px rgba(0,0,0,0.5)); }
+
+    & .box.white { color: @white; }
+
+    & a {
+        color: rgba(255,255,255,0.4);
+        &:hover, &:active { color: @white; }
+    }
+
+    & .box { .box-shadow(0px 4px 8px rgba(0,0,0,0.5)); }
+    & .bordered { border: solid 8px @white; }
+}

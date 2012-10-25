@@ -1,0 +1,11 @@
+@import url("http://fonts.googleapis.com/css?family=Comfortaa:400,700");
+.kinout{font-family:'Comfortaa';background:#652e8f url("../image/bg-default.png");color:#ffffff;text-shadow:0px 1px 0px rgba(0, 0, 0, 0.5);}.kinout mark{color:#FFC507;}
+.kinout progress span{background:#FFC507;}
+.kinout h1{text-shadow:0px 10px 10px rgba(0, 0, 0, 0.5);}
+.kinout h2{text-shadow:0px 8px 8px rgba(0, 0, 0, 0.5);}
+.kinout h3{text-shadow:0px 6px 6px rgba(0, 0, 0, 0.5);}
+.kinout h4{text-shadow:0px 4px 4px rgba(0, 0, 0, 0.5);}
+.kinout .box.white{color:#ffffff;}
+.kinout a{color:rgba(255, 255, 255, 0.4);}.kinout a:hover,.kinout a:active{color:#ffffff;}
+.kinout .box{-webkit-box-shadow:0px 4px 8px rgba(0, 0, 0, 0.5);-moz-box-shadow:0px 4px 8px rgba(0, 0, 0, 0.5);box-shadow:0px 4px 8px rgba(0, 0, 0, 0.5);}
+.kinout .bordered{border:solid 8px #ffffff;}

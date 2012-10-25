@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="resources/images/icon@2x.png"/>
+    <link rel="apple-touch-startup-image" href="resources/images/splash.png" />
+
+    <title>Kinout - HTML5 Keynote.</title>
+
+    <link rel="stylesheet" href="http://kinout.tapquo.com/build/kinout-1.0.css">
+    <link rel="stylesheet" href="assets/css/theme.kinout.css">
+    <link href="assets/javascript/rainbow/themes/blackboard.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="kinout">
+
+        <section>
+            <article>
+                <h1>#kinout<mark>JS</mark></h1>
+                <h4><mark>HTML5 based Keynote System.</mark></h4>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <header>
+                    <h2>Header element</h2>
+                    <h4>Header subelement</h2>
+                </header>
+
+                <footer>
+                    <h2>Footer element</h2>
+                    <h4>Footer subelement</h2>
+                </footer>
+
+                <div>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </div>
+                <div>
+                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <header class="box">
+                    <h2>Header element (.box)</h2>
+                    <h4>Subheader element</h2>
+                </header>
+
+                <footer class="box white">
+                    <h2>Footer element (.box .white)</h2>
+                    <h4>Footer subelement</h2>
+                </footer>
+            </article>
+        </section>
+
+        <section>
+            <article data-size="middle">
+                <blockquote>JavaScript doesn't suck! You're just doing it wrong.</blockquote>
+                <cite>Doug Crockford</cite>
+            </article>
+        </section>
+
+        <section data-color="red" data-color="image">
+            <article>
+                <h1>vertical slides</h1>
+                <h3><mark>(press down to view next slide)</mark></h3>
+            </article>
+            <article>
+                <h1>second slide</h1>
+                <h3><mark>(press down to view next slide)</mark></h3>
+            </article>
+            <article>
+                <h1>third slide</h1>
+                <h3><mark>Right! Now you can press right key.</mark></h3>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h2>data-<mark>step</mark></h2>
+                <h4>...a cool property for elements in slide.</h4>
+
+                <div>
+
+                </div>
+                <div>
+                    <ul>
+                        <li><mark>press down to view next step</mark></li>
+                        <li data-step="fade">Step with "fade"</li>
+                        <li data-step="boom">Step with "boom"</li>
+                        <li data-step="zoom">Step with "zoom"</li>
+                        <li data-step="move">Step with "move"</li>
+                        <li data-step="move alternate">Step with "move alternate"</li>
+                        <li data-step="fade"><mark>press down to see in vertical slide</mark></li>
+                    </ul>
+                </div>
+
+                <div>
+            </article>
+
+            <article>
+                <header>
+                    <h2>press down...</h2>
+                </header>
+                <h1 data-step="move">yeah!!!</h1>
+                <h2 data-step="move alternate"><mark>it works!</mark></h2>
+            </article>
+        </section>
+
+        <section data-image="http://farm6.staticflickr.com/5142/5837835862_81f956dd69.jpg" style="background-image: url(http://farm6.staticflickr.com/5142/5837835862_81f956dd69.jpg);">
+            <article>
+                <footer class="box">
+                    <h2>data-image</h2>
+                    <h3>... a easy way to full-screen images</h3>
+                </footer>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <header>
+                    <h2>Embedded code</h2>
+                    <h4><mark>a great way to show your code</mark></h4>
+                </header>
+
+                <div>
+                    <pre class="margin-top" contenteditable="true">
+<code data-language="javascript">$.ajax({
+    type: 'POST', // defaults to 'GET'
+    url: 'http://rest',
+    data: {user: 'soyjavi', pass: 'twitter'},
+    dataType: 'json', //'json', 'xml', 'html', or 'text'
+    async: true,
+    success: function(response) { ... },
+    error: function(xhr, type) { ... }
+});</code>          </pre>
+
+                    <h4><mark>Press to view code with data-step</mark></h4>
+
+           <pre class="margin-top" data-step="move alternate">
+<code data-language="javascript">$.ajax({
+    type: 'POST', // defaults to 'GET'
+    url: 'http://rest',
+    data: {user: 'soyjavi', pass: 'twitter'},
+    dataType: 'json', //'json', 'xml', 'html', or 'text'
+    async: true,
+    success: function(response) { ... },
+    error: function(xhr, type) { ... }
+});</code>          </pre>
+                </div>
+            </article>
+        </section>
+
+
+        <section>
+            <article>
+                <header>
+                    <h2>Columns</h2>
+                    <h4><mark>divide your slide easily</mark></h4>
+                </header>
+
+                <div>
+                    <span class="column box big">
+                        .box .big
+                    </span>
+                    <span class="column box big">
+                        .box .big
+                    </span>
+                </div>
+
+                <div>
+                    <span class="column box medium">
+                        .box .medium
+                    </span>
+                    <span class="column box medium">
+                        .box .medium
+                    </span>
+                    <span class="column box medium">
+                        .box .medium
+                    </span>
+                </div>
+
+                <div>
+                    <span class="column box small">
+                         .box .small
+                    </span>
+                    <span class="column box small">
+                        .box .small
+                    </span>
+                    <span class="column box small">
+                        .box .small
+                    </span>
+                    <span class="column box small">
+                        .box .small
+                    </span>
+                </div>
+
+                <div><mark>Example with images</mark></div>
+                <div>
+                    <span class="column small">
+                        <img src="http://tapquo.com/images/team-javi.jpg" class="bordered size_200"/>
+                        <h4><a href="http://twitter.com/soyjavi"><mark>@soyjavi</mark></a></h4>
+                    </span>
+                    <span class="column small">
+                        <img src="http://tapquo.com/images/team-aitor.jpg" class="bordered size_200"/>
+                        <h4><a href="http://twitter.com/soyjavi"><mark>@aitorjvoa</mark></a></h4>
+                    </span>
+                    <span class="column small">
+                        <img src="http://tapquo.com/images/team-mikel.jpg" class="bordered size_200"/>
+                        <h4><a href="http://twitter.com/soyjavi"><mark>@mikel_ade</mark></a></h4>
+                    </span>
+                    <span class="column small">
+                        <img src="http://tapquo.com/images/team-janire.jpg" class="bordered size_200"/>
+                        <h4><a href="http://twitter.com/soyjavi"><mark>@janixy91</mark></a></h4>
+                    </span>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <header>
+                    <h2><mark>Nerd</mark> behind #kinout<mark>JS</mark></h2>
+                    <h4><mark>...dangerous with SublimeText</mark></h4>
+                </header>
+                <div class="top">
+                    <span class="column big">
+                        <img src="assets/image/soyjavi.jpg" class="bordered size_256 box">
+                        <h4><a href="http://twitter.com/soyjavi"><mark>@soyjavi</mark></a></h4>
+                    </span>
+
+                    <span class="column big right">
+                        <ul>
+                            <li class="text size4">Leire's <mark>husband</mark></li>
+                            <li class="text size08">CEO & Founder at <mark>@tapquo</mark></li>
+                            <li class="text size08"><mark>@LungoJS</mark> & <mark>@QuoJS</mark> author</li>
+                            <li class="text size08"><mark>#Web</mark> believer & <mark>#W3C</mark> member</li>
+                            <li class="text size07"><mark>#JavaScript</mark> & #CleanCode lover</li>
+                            <li class="text size2"><mark>#HTML5</mark> evangelist </mark></li>
+                            <li class="text size09">...sometimes <mark>#Nerd Speaker</mark></li>
+                        </ul>
+                    </span>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h1>...fork me on <mark>github</mark></h1>
+                <h2><a href="https://github.com/soyjavi/kinout"><mark>https://github.com/soyjavi/</mark>kinout</a></h2>
+            </article>
+        </section>
+    </div>
+    <script src="assets/javascript/QuoJS.js"></script>
+    <script src="assets/javascript//raf.js"></script>
+    <script src="http://kinout.tapquo.com/build/kinout-1.0.js"></script>
+    <script>
+        $$(document).ready(function() {
+            KINOUT.init();
+        });
+    </script>
+    <script src="assets/javascript/rainbow/rainbow.min.js"></script>
+    <script src="assets/javascript/rainbow/language/generic.js"></script>
+
+</body>
+</html>

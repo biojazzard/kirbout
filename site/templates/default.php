@@ -13,8 +13,10 @@ snippet('header');
           <?php if ($mainItem->header()): ?>
           <header>
               <?php echo kirbytext($mainItem->header()); ?>
+              <div class="slide-title">
+                <?php echo kirbytext($mainItem->title()) ?>
+              </div>
           </header>
-          <div class="slide-title"><?php echo kirbytext($mainItem->title()) ?></div>
           <?php endif ?>
           <?php /* Footer Render */ ?>
           <?php if ($mainItem->footer()): ?>
@@ -35,9 +37,11 @@ snippet('header');
                   <?php /* Header Render */ ?>
                   <?php if ($subItem->header()): ?>
                   <header>
-                      <?php echo kirbytext($subItem->header()); ?>
+                    <?php echo kirbytext($subItem->header()); ?>
+                    <div class="sub-slide-title">
+                      <?php echo kirbytext($subItem->title()) ?>
+                    </div>
                   </header>
-                  <div class="sub-slide-title"><?php echo kirbytext($subItem->title()) ?></div>
                   <?php endif ?>
                   <?php /* Footer Render */ ?>
                   <?php if ($subItem->footer()): ?>

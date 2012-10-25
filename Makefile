@@ -7,6 +7,17 @@ LESS_COMPRESSOR ?= `which lessc`
 UGLIFY_JS ?= `which uglifyjs`
 WATCHR ?= `which watchr`
 
+#QUO Related paths
+CMP=./components/QuoJS/
+QUO_SRC=src/
+QUO_BUILD=build/
+COMPILER=vendor/google-compiler/compiler.jar
+LUNGO_SOURCES=./js/
+LUNGO_NAMESPACE=quo.
+BUILDPATH=../package/
+MINIFIED="min"
+PACKED="packed"
+
 HR = ###############___________________###################
 
 style:
@@ -38,4 +49,12 @@ watch:
 	@echo "Watching Kinout ..."
 	@echo "${HR}\n"
 	watchr -e "watch('less/.*\.less') { system 'make style' }"
+
+quo:
+	@echo "========= START ============ QUOJS COMPILER w/ Uglify ============================"
+
+	cat ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}core.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}element.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}environment.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}output.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}query.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}style.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}ajax.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}events.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}events.manager.js ${CMP}${QUO_SRC}${QUO_BUILD}${LUNGO_NAMESPACE}events.gestures.js > ./js/quo.js
+	uglifyjs -nc ./js/quo.js > ./js/quo.min.js
+
+	@echo "============================ QUOJS COMPILER w/ Uglify =========== END ============"
 
