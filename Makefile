@@ -34,6 +34,8 @@ kinout:
 	recess ./src/less/kinout.less --compress > ./css/kinout-1.0.min.css
 
 watch:
-	echo "Watching less files..."; \
+	@echo "\n${HR}"
+	@echo "Watching Kinout ..."
+	@echo "${HR}\n"
 	watchr -e "watch('less/.*\.less') { system 'make style' }"
 
