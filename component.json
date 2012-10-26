@@ -1,0 +1,13 @@
+{
+  "name": "kirbout",
+  "version": "1.0.1",
+  "main": ["./css/style.min.css", "./js/script.min.js", "./img/dot-a.png"],
+  "dependencies": {
+    "Kinout": {
+      "source": {}
+    },
+    "QuoJS": {
+      "source": {}
+    }
+  }
+}
