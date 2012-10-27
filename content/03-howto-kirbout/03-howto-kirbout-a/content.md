@@ -6,13 +6,13 @@ You need a web server (of your choice) with PHP > 5.3.
 * * *
 ###### 2.-Check whats going on in the */content* folder.
 You can find all *TEH* Sildes content there.
-<pre>|- 01-intro ----| intro.md
+```|- 01-intro ----| intro.md
 |- 02-slide ----| experience.md
 |               | 02-sub-slide-a ----| newbie.md
 |               | 02-sub-slide-b ----| junior.md
 |               | 02-sub-slide-c ----| senior.md
 |- 03-credits --| thanks-mom.md
-</pre>
+```
 * * *
 ###### Keynote Navigation:
 First level: Main slides: Use the *Left* & *Right* buttons

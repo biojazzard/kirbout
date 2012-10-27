@@ -5,14 +5,18 @@ Text:
 Inline Images *&lt;img&gt;*
 ```
 *w/ alt*
-&#33;&#91;Alt Text&#93;&#40;/path/file.img&#41;
-renders as->
+![Alt Text][/path/file.img];
+
+  renders as->
+
 <img src="/path/file.img" alt="Alt Text">
 ```
 *Simple*
 ```
 ![/path/file.img]
-renders as->
+
+  renders as->
+
 <img src="/path/file.img">
 ```
 ###### *Up* & *Down* Button Availiable

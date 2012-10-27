@@ -5,14 +5,22 @@ Text:
 
 Emphasis *&lt;em&gt;*
 ```
-* This is an em *   renders as ->    <em>This is an em</em>
-_ This is an em _   renders as ->    <em>This is an em</em>
+* This is an em *
+_ This is an em _
+
+  renders as ->
+
+<em>This is an em</em>
 ```
 
 Bold *&lt;strong&gt;*
 ```
-** This is a strong **   renders as ->    <strong>This is a strong</strong>
-__ This is a strong __   renders as ->    <strong>This is a strong</strong>
+** This is a strong **
+__ This is a strong __
+
+  renders as ->
+
+<strong>This is a strong</strong>
 ```
 ###### *Up* & *Down* Button Availiable
 ----

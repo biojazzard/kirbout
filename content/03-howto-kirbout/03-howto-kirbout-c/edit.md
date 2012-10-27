@@ -5,13 +5,15 @@ Text:
 So, let´s see what we find here:
 
 ###### Minimal Config (Only Content)
-<pre>Text:
+<pre>
+Text:
 &#35;&#35; Markdown Header
 
 &#91;Markdown&#93;&#91;id&#93; is &#42;&#42;awesome&#42;&#42;
 
 [id]: http://daringfireball.net/projects/markdown/ "Markdown Site"
-&#45;&#45;&#45;&#45;</pre>
+&#45;&#45;&#45;&#45;
+</pre>
 * * *
 Basically, *Markdown* between the *Text:* and the closing *&#45;&#45;&#45;&#45;*.
 * * *

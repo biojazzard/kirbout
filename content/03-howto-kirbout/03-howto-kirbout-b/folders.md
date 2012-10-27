@@ -4,16 +4,17 @@ Text:
 ###### 3.-Folder names
 *Main slides* (parent)
 Numbered folder containing a *Markdown* file
-<pre>|- 01-intro ----| intro.md
-</pre>
+```
+|- 01-intro ----| intro.md
+```
 *Sub Slides* (children)
 Add Folders with an ordered letter suffix.
-<pre>
+```
 |- 02-slide ----| experience.md (parent)
 |               | 02-sub-slide-a ----| newbie.md (children)
 |               | 02-sub-slide-b ----| junior.md (children)
 |               | 02-sub-slide-c ----| senior.md (children)
-</pre>
+```
 ###### _*.md_ names are not used)
 (Use _*.md_ file names as you want.)
 * * *

@@ -7,13 +7,15 @@ Let´s go for more:
 ###### Extra Config (Header and/or Footer)
 You can easily add headers and footers per slide, adding the *Header:* and *Footer:*
 <pre>Header:
-&#42;&#42;Nice Header
+## Nice Header with [links](http://example.com/)
 &#45;&#45;&#45;&#45;
 Footer:
-&#42;&#42;Cool Footer
-&#45;&#45;&#45;&#45;</pre>
+## Nice Footer with [links][id]
+&#45;&#45;&#45;&#45;
+</pre>
 * * *
-Don´t forget to close them: *&#45;&#45;&#45;&#45;* !!!
+They can be located anywhere in the document,
+as long as they are properly closed: _&#45;&#45;&#45;&#45;_ !!!
 * * *
 #### PRESS the *Down* Button
 ----

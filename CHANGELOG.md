@@ -1,3 +1,6 @@
+### 1.1.1 (27 Oct 2012)
+    * Added conent.
+
 ### 1.1.0 (27 Oct 2012)
 
 * Bowerized

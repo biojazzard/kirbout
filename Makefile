@@ -46,6 +46,7 @@ style:
 script:
 	clear
 	@echo "\n${HR} Building Scripts ${HR}"
+	coffee --output ./js/js.script.js --compile ./src/script.coffee
 	# cat ${CMP}${QUO_BUILD}quojs.max.js assets/javascript/raf.js ${CMP}${KINOUT_BUILD}kinout.max.js assets/javascript/rainbow/rainbow.min.js assets/javascript/rainbow/language/generic.js ./src/js/js.script.js > ./js/script.js
 	cat ${CMP}${QUO_BUILD}quojs.max.js ${CMP}${RAF_BUILD}Raf.js ${CMP}${KINOUT_BUILD}kinout.max.js assets/javascript/rainbow/rainbow.min.js assets/javascript/rainbow/language/generic.js ./src/js/js.script.js > ./js/script.js
 	uglifyjs -nc ./js/script.js > ./js/script.min.js
@@ -69,7 +70,7 @@ kin-js:
 watch:
 	clear
 	@echo "\n${HR} Watching Kinout Styles ${HR}"
-	watchr -e "watch('less/.*\.less') { system 'make style' }"
+	watchr -e "watch('src/less/.*\.less') { system 'make style' }"
 
 quo-js:
 	clear

@@ -15,7 +15,9 @@ Headings *&lt;h1&gt;*,*&lt;h2&gt;*,...
 Headings with id: *&lt;h1 id="header1"&gt;*
 ```
 # This is a header 1 #    {#header1}
+
 renders as ->
+
 <h1 id="header1">This is a header 1</h1>
 ```
 * * *
