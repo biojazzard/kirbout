@@ -20,7 +20,7 @@ That´s what you get: a very nice HTML5 Keynote System based on Markdown files s
 *kirbout has to be awesome!!!*
 I believe in this kind of sinergy...
 
-#Howto
+# Howto
 
 ## 1.-Download [kirbout](https://github.com/biojazzard/kirbout) and put it some where in your server.
 * * *
@@ -50,11 +50,11 @@ For Secondary (children) slides: Add a letter suffix.
 |-02-whenever
 </pre>
 * * *
-Adding a Silde equals adding New Folder with a .txt file inside.
+Adding a Silde equals adding New Folder with a .md file inside.
 Same for Secondary Slides, at it's parent level.
 * * *
 
-## 4.-Add Slides (Edit the *.txt* files)
+## 4.-Add Slides (Edit the *.md* files)
 So, let´s see what we find here:
 
 ### Minimal Config (Only Content)
@@ -68,7 +68,7 @@ So, let´s see what we find here:
 Basically, Markdown Tags between the *Text:* and the closing *&#45;&#45;&#45;&#45;*.
 * * *
 
-## 5.-Content Edit (inside *.txt* files)
+## 5.-Content Edit (inside *.md* files)
 Let´s go for more:
 
 ### Extra Layout (Header and/or Footer)
@@ -84,7 +84,7 @@ Footer:
 Don´t forget to close them: *&#45;&#45;&#45;&#45;* !!!
 * * *
 
-## 6.-Edit the *.txt* files
+## 6.-Edit the *.md* files
 And finally, the Title. tag.
 
 ### Slide Title () 
@@ -93,7 +93,7 @@ But maybe we want a "Real Title" instead of a "real-title"... So we add:
 <pre>Title: &#42;&#42;Real Title
 ----</pre>
 * * *
-Yes, you can use Markdown here also, as every where in the *.txt*
+Yes, you can use Markdown here also, as every where in the *.md*
 And of course don´t forget to close it: *&#45;&#45;&#45;&#45;* !!!
 * * *
 

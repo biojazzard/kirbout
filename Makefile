@@ -26,66 +26,65 @@ KINOUT_SRC=Kinout/src/
 KINOUT_BUILD=Kinout/js/
 KINOUT_NAMESPACE=Kinout.
 
-HR = ###############___________________###################
+#RAF Related paths
+RAF_SRC=raf-coffeescript/src/
+RAF_BUILD=raf-coffeescript/js/
+RAF_NAMESPACE=raf.
+
+HR = "--------------------------"
 
 style:
 	clear
-	@echo "\n${HR}"
-	@echo "Building Styles ..."
-	@echo "${HR}\n"
+	@echo "\n${HR} Building Styles ${HR}"
 	recess ./src/less/theme.kinout.less --compile > ./css/theme.kinout.css
 	recess ./src/less/theme.kinout.less --compress > ./css/theme.kinout.min.css
 	recess ./src/less/kinout.less --compile > ./css/kinout-1.0.css
 	recess ./src/less/kinout.less --compress > ./css/kinout-1.0.min.css
 	cat ./css/kinout-1.0.min.css ./css/theme.kinout.min.css assets/javascript/rainbow/themes/blackboard.css > ./css/style.min.css
+	@echo "\n${HR} Building Styles ${HR}\n"
 
 script:
 	clear
-	@echo "\n${HR}"
-	@echo "Building JavaScript ..."
-	@echo "${HR}\n"
+	@echo "\n${HR} Building Scripts ${HR}"
 	# cat ${CMP}${QUO_BUILD}quojs.max.js assets/javascript/raf.js ${CMP}${KINOUT_BUILD}kinout.max.js assets/javascript/rainbow/rainbow.min.js assets/javascript/rainbow/language/generic.js ./src/js/js.script.js > ./js/script.js
-	cat ${CMP}${QUO_BUILD}quojs.max.js ./src/js/raf.js ${CMP}${KINOUT_BUILD}kinout.max.js assets/javascript/rainbow/rainbow.min.js assets/javascript/rainbow/language/generic.js ./src/js/js.script.js > ./js/script.js
+	cat ${CMP}${QUO_BUILD}quojs.max.js ${CMP}${RAF_BUILD}Raf.js ${CMP}${KINOUT_BUILD}kinout.max.js assets/javascript/rainbow/rainbow.min.js assets/javascript/rainbow/language/generic.js ./src/js/js.script.js > ./js/script.js
 	uglifyjs -nc ./js/script.js > ./js/script.min.js
+	@echo "\n${HR} Building Styles ${HR}\n"
 
 kin-less:
 	clear
-	@echo "\n${HR}"
-	@echo "Building Kinout ..."
-	@echo "${HR}\n"
+	@echo "\n${HR} Building Kinout Styles ${HR}"
 	recess ./src/less/kinout.less --compile > ./css/kinout-1.0.css
 	recess ./src/less/kinout.less --compress > ./css/kinout-1.0.min.css
+	@echo "\n${HR} Building Kinout Styles ${HR}"
 
 kin-js:
-	@echo "========= START ============ KinOut COMPILER w/ Uglify ============================"
+	@echo "\n${HR} KinOut JS COMPILER w/ Uglify ${HR}"
 	coffee --compile --output ${CMP}${KINOUT_BUILD} ${CMP}${KINOUT_SRC}
 	# OK Compilation to split files
 	cat ${CMP}${KINOUT_BUILD}${KINOUT_NAMESPACE}js ${CMP}${KINOUT_BUILD}${KINOUT_NAMESPACE}Constants.js ${CMP}${KINOUT_BUILD}${KINOUT_NAMESPACE}Element.js ${CMP}${KINOUT_BUILD}${KINOUT_NAMESPACE}Events.js ${CMP}${KINOUT_BUILD}${KINOUT_NAMESPACE}Router.js ${CMP}${KINOUT_BUILD}${KINOUT_NAMESPACE}Step.js ${CMP}${KINOUT_BUILD}${KINOUT_NAMESPACE}Url.js ${CMP}${KINOUT_BUILD}${KINOUT_NAMESPACE}View.js > ${CMP}${KINOUT_BUILD}kinout.max.js
 	uglifyjs -nc ${CMP}${KINOUT_BUILD}kinout.max.js > ${CMP}${KINOUT_BUILD}kinout.min.js
-	@echo "============================ KinOut COMPILER w/ Uglify =========== END ============"
+	@echo "\n${HR} KinOut JS COMPILER w/ Uglify ${HR}"
 
 watch:
 	clear
-	@echo "\n${HR}"
-	@echo "Watching Kinout ..."
-	@echo "${HR}\n"
+	@echo "\n${HR} Watching Kinout Styles ${HR}"
 	watchr -e "watch('less/.*\.less') { system 'make style' }"
 
 quo-js:
 	clear
-	@echo "========= START ============ QUOJS COMPILER w/ Uglify ============================"
+	@echo "\n${HR} QuoJS COMPILER w/ Uglify ${HR}"
 	# OK Compilation to split files
 	coffee --compile --output ${CMP}${QUO_BUILD} ${CMP}${QUO_SRC}
 	cat ${CMP}${QUO_BUILD}${QUO_NAMESPACE}js ${CMP}${QUO_BUILD}${QUO_NAMESPACE}core.js ${CMP}${QUO_BUILD}${QUO_NAMESPACE}element.js ${CMP}${QUO_BUILD}${QUO_NAMESPACE}environment.js ${CMP}${QUO_BUILD}${QUO_NAMESPACE}output.js ${CMP}${QUO_BUILD}${QUO_NAMESPACE}query.js ${CMP}${QUO_BUILD}${QUO_NAMESPACE}style.js ${CMP}${QUO_BUILD}${QUO_NAMESPACE}ajax.js ${CMP}${QUO_BUILD}${QUO_NAMESPACE}events.js ${CMP}${QUO_BUILD}${QUO_NAMESPACE}events.manager.js ${CMP}${QUO_BUILD}${QUO_NAMESPACE}events.gestures.js > ${CMP}${QUO_BUILD}quojs.max.js
 	uglifyjs -nc ${CMP}${QUO_BUILD}quojs.max.js > ${CMP}${QUO_BUILD}quojs.min.js
-	@echo "============================ QUOJS COMPILER w/ Uglify =========== END ============"
+	@echo "\n${HR} QuoJS COMPILER w/ Uglify ${HR}"
 
 raf-js:
 	clear
-	@echo "========= START ============ RAF COMPILER w/ Uglify ============================"
+	@echo "\n${HR} RAF COMPILER w/ Uglify ${HR}"
 	# OK Compilation to split files
-	# coffee --compile ./js/raf.js ./src/raf.coffee
-	coffee --output ./src/js/ --compile ./src/Raf.coffee
+	coffee --output ${CMP}${RAF_BUILD} --compile ${CMP}${RAF_SRC}Raf.coffee
 	uglifyjs -nc ./src/js/Raf.js > ./src/js/Raf.min.js
-	@echo "============================ RAF COMPILER w/ Uglify =========== END ============"
+	@echo "\n${HR} RAF COMPILER w/ Uglify ${HR}"
 
