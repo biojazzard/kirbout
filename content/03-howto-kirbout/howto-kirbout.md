@@ -2,7 +2,7 @@ Title: Howto kirb*out*
 ----
 Text:
 # Howto kirb*out*
-####  About creating, and editing Slides.
+####  About creating and editing Slides.
 * * *
 ##### PRESS the *Down* Button
 ----

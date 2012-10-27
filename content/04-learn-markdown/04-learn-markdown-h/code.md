@@ -3,15 +3,16 @@ Title: Learn kirb*out*
 Text:
 ###### 8.- Code
 Code Window *&lt;pre&gt;*
-<pre>Wrap it in a *pre* tag
-&lt;pre&gt;
+```
+Wrap it in a *```*
+```
   this.awesome();
-&lt;/pre&gt;
-Code can be easily styled
-&lt;pre&gt;
-  *this*.awesome();
-&lt;/pre&gt;
+```
+You can also wrap it in a *pre* tag
+<pre>
+  this.awesome();
 </pre>
+```
 ###### *Up* & *Down* Button Availiable
 ----
 Header:

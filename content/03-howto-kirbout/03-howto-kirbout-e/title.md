@@ -1,15 +1,15 @@
-Title: kirb*out* Howto
-----
+
 Text:
-###### 6.-Edit the *.txt* files
+###### 6.-Edit the *.md* files
 And finally, the Title. tag.
 ###### Title Config
-Adding a title to the slide is not necesary, as the slide will take it´s file name.
-But maybe we want a "Real Title" instead of a "real-title"... So we add:
+Adding a title to the slide *is not necesary*,
+as the slide will take *it´s parent folder name.*
+But maybe we want a *"Real Title"* instead of a *"real-title"*... So we add:
 <pre>Title: &#42;&#42;Real Title
 &#45;&#45;&#45;&#45;</pre>
 * * *
-Yes, you can use Markdown here also, as every where in the *.txt*
+Yes, you can use Markdown here also.
 And of course don´t forget to close it: *&#45;&#45;&#45;&#45;* !!!
 * * *
 #### Now you can PRESS the *Right* Button

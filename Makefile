@@ -44,9 +44,8 @@ script:
 	@echo "\n${HR}"
 	@echo "Building JavaScript ..."
 	@echo "${HR}\n"
-	# cat assets/javascript/QuoJS.js assets/javascript/raf.js assets/javascript/kinout-1.0.js assets/javascript/rainbow/rainbow.min.js assets/javascript/rainbow/language/generic.js ./src/js/js.script.js > ./js/script.js
-	# cat ${CMP}${QUO_BUILD}quojs.js assets/javascript/raf.js assets/javascript/kinout-1.0.js assets/javascript/rainbow/rainbow.min.js assets/javascript/rainbow/language/generic.js ./src/js/js.script.js > ./js/script.js
-	cat ${CMP}${QUO_BUILD}quojs.max.js assets/javascript/raf.js ${CMP}${KINOUT_BUILD}kinout.max.js assets/javascript/rainbow/rainbow.min.js assets/javascript/rainbow/language/generic.js ./src/js/js.script.js > ./js/script.js
+	# cat ${CMP}${QUO_BUILD}quojs.max.js assets/javascript/raf.js ${CMP}${KINOUT_BUILD}kinout.max.js assets/javascript/rainbow/rainbow.min.js assets/javascript/rainbow/language/generic.js ./src/js/js.script.js > ./js/script.js
+	cat ${CMP}${QUO_BUILD}quojs.max.js ./src/js/raf.js ${CMP}${KINOUT_BUILD}kinout.max.js assets/javascript/rainbow/rainbow.min.js assets/javascript/rainbow/language/generic.js ./src/js/js.script.js > ./js/script.js
 	uglifyjs -nc ./js/script.js > ./js/script.min.js
 
 kin-less:
@@ -81,5 +80,12 @@ quo-js:
 	uglifyjs -nc ${CMP}${QUO_BUILD}quojs.max.js > ${CMP}${QUO_BUILD}quojs.min.js
 	@echo "============================ QUOJS COMPILER w/ Uglify =========== END ============"
 
-
+raf-js:
+	clear
+	@echo "========= START ============ RAF COMPILER w/ Uglify ============================"
+	# OK Compilation to split files
+	# coffee --compile ./js/raf.js ./src/raf.coffee
+	coffee --output ./src/js/ --compile ./src/Raf.coffee
+	uglifyjs -nc ./src/js/Raf.js > ./src/js/Raf.min.js
+	@echo "============================ RAF COMPILER w/ Uglify =========== END ============"
 

@@ -1,17 +1,20 @@
 Title: Learn kirb*out*
 ----
 Text:
-###### 4.- Images
+###### 5.- Images
 Inline Images *&lt;img&gt;*
-<pre>*w/ alt*
+```
+*w/ alt*
 &#33;&#91;Alt Text&#93;&#40;/path/file.img&#41;
 renders as->
-&lt;img src="/path/file.img" alt="Alt Text"&gt;
+<img src="/path/file.img" alt="Alt Text">
+```
 *Simple*
-&#33;&#40;/path/file.img&#41;
+```
+![/path/file.img]
 renders as->
-&lt;img src="/path/file.img"&gt;
-</pre>
+<img src="/path/file.img">
+```
 ###### *Up* & *Down* Button Availiable
 ----
 Header:

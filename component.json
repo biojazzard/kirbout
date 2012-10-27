@@ -1,13 +1,25 @@
 {
   "name": "kirbout",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": ["./css/style.min.css", "./js/script.min.js", "./img/dot-a.png"],
   "dependencies": {
     "Kinout": {
-      "source": {}
+      "source": {
+        "type": "git",
+        "url": "git://github.com/soyjavi/Kinout.git"
+      }
     },
     "QuoJS": {
-      "source": {}
+      "source": {
+        "type": "git",
+        "url": "git://github.com/soyjavi/QuoJS.git"
+      }
+    },
+    "php-markdown": {
+      "source": {
+        "type": "git",
+        "url": "git://github.com/michelf/php-markdown.git"
+      }
     }
   }
 }

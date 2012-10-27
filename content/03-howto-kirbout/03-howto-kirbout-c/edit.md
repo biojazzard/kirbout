@@ -1,19 +1,19 @@
 Title: kirb*out* Howto
 ----
 Text:
-###### 5.-Edit the *.txt* files
-Let´s go for more:
+###### 4.-Edit the *.md* files
+So, let´s see what we find here:
 
-###### Extra Config (Header and/or Footer)
-You can easily add headers and footers per slide, adding the *Header:* and *Footer:*
-<pre>Header:
-&#42;&#42;Nice Header
-&#45;&#45;&#45;&#45;
-Footer:
-&#42;&#42;Cool Footer
+###### Minimal Config (Only Content)
+<pre>Text:
+&#35;&#35; Markdown Header
+
+&#91;Markdown&#93;&#91;id&#93; is &#42;&#42;awesome&#42;&#42;
+
+[id]: http://daringfireball.net/projects/markdown/ "Markdown Site"
 &#45;&#45;&#45;&#45;</pre>
 * * *
-Don´t forget to close them: *&#45;&#45;&#45;&#45;* !!!
+Basically, *Markdown* between the *Text:* and the closing *&#45;&#45;&#45;&#45;*.
 * * *
 #### PRESS the *Down* Button
 ----

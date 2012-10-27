@@ -4,16 +4,16 @@ Text:
 ###### 2.- Basic Formats
 
 Emphasis *&lt;em&gt;*
-<pre>
-&#42; This is an em &#42;   renders as ->    &lt;em&gt;This is an em&lt;/em&gt;
-&#95; This is an em &#95;   renders as ->    &lt;em&gt;This is an em&lt;/em&gt;
-</pre>
+```
+* This is an em *   renders as ->    <em>This is an em</em>
+_ This is an em _   renders as ->    <em>This is an em</em>
+```
 
 Bold *&lt;strong&gt;*
-<pre>
-&#42;&#42; This is a strong &#42;&#42;   renders as ->    &lt;strong&gt;This is a strong&lt;/strong&gt;
-&#95;&#95; This is a strong &#95;&#95;   renders as ->    &lt;strong&gt;This is a strong&lt;/strong&gt;
-</pre>
+```
+** This is a strong **   renders as ->    <strong>This is a strong</strong>
+__ This is a strong __   renders as ->    <strong>This is a strong</strong>
+```
 ###### *Up* & *Down* Button Availiable
 ----
 Header:

@@ -3,19 +3,22 @@ Title: Learn kirb*out*
 Text:
 ###### 3.- Basic Formats
 Paragraphs *&lt;p&gt;*
-<pre>Triggered by a
+```
+Triggered by a
 carriage return
-</pre>
+```
 
 Quoting *&lt;blockquote&gt;*
-<pre>&gt;    This is the first level of quoting.
-&gt;&nbsp;&gt;        This is a nested blockquote.
-</pre>
+```
+>    This is the first level of quoting.
+> >        This is a nested blockquote.
+```
 
 Horizontal Rules *&lt;hr&gt;*
-<pre>&#42; &#42; &#42;
-&#42;&#42;&#42;
-</pre>
+```
+* * *
+***
+```
 ###### *Up* & *Down* Button Availiable
 ----
 Header:

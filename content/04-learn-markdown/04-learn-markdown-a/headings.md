@@ -3,14 +3,22 @@ Title: Learn kirb*out*
 Text:
 ###### 1.- Basic Formats
 Headings *&lt;h1&gt;*,*&lt;h2&gt;*,...
-<pre>
-&#35; This is a header 1            renders as ->    &lt;h1&gt;This is a header 1&lt;/h1&gt;
-&#35;&#35; This is a header 2           renders as ->    &lt;h2&gt;This is a header 1&lt;/h2&gt;
-&#35;&#35;&#35; This is a header 3          renders as ->    &lt;h3&gt;This is a header 1&lt;/h3&gt;
-&#35;&#35;&#35;&#35; This is a header 4         renders as ->    &lt;h4&gt;This is a header 1&lt;/h4&gt;
-&#35;&#35;&#35;&#35;&#35; This is a header 5        renders as ->    &lt;h5&gt;This is a header 1&lt;/h5&gt;
-&#35;&#35;&#35;&#35;&#35;&#35; This is a header 6       renders as ->    &lt;h6&gt;This is a header 1&lt;/h6&gt;
-</pre>
+```
+# This is a header 1            renders as ->    <h1>This is a header 1</h1>
+## This is a header 2           renders as ->    <h2>This is a header 2</h2>
+### This is a header 3          renders as ->    <h1>This is a header 3</h1>
+#### This is a header 4         renders as ->    <h1>This is a header 4</h1>
+##### This is a header 5        renders as ->    <h1>This is a header 5</h1>
+###### This is a header 6       renders as ->    <h1>This is a header 6</h1>
+```
+###### [Markdown *Extra* [?]](http://michelf.ca/projects/php-markdown/extra/)
+Headings with id: *&lt;h1 id="header1"&gt;*
+```
+# This is a header 1 #    {#header1}
+renders as ->
+<h1 id="header1">This is a header 1</h1>
+```
+* * *
 ###### *Up* & *Down* Button Availiable
 ----
 Header:

@@ -1,19 +1,22 @@
-Title: Howto kirb*out* {#arrow-icon}
+Title: Howto kirb*out*
 ----
 Text:
 ###### 1.-Download [kirb*out*](https://github.com/biojazzard/kirbout) and put it some where in your server.
 You need a web server (of your choice) with PHP > 5.3.
 * * *
 ###### 2.-Check whats going on in the */content* folder.
-You can find all TEH Sildes content there.
-In the first level, you´ll find the Main slides: Use the *Left* & *Right* arrows to navigate.
-Main slides may have children: Use the *Up* & *Down* arrows to navigate.
+You can find all *TEH* Sildes content there.
+<pre>|- 01-intro ----| intro.md
+|- 02-slide ----| experience.md
+|               | 02-sub-slide-a ----| newbie.md
+|               | 02-sub-slide-b ----| junior.md
+|               | 02-sub-slide-c ----| senior.md
+|- 03-credits --| thanks-mom.md
+</pre>
 * * *
-###### 3.-Folder names (*.txt names are not used)
-For Main slides:
-Ex: *01-whatever, 02-whenever...*
-For Secondary (children) slides: Add a letter suffix.
-Ex: *02-whenever-a, 02-whenever-b, 02-whenever-c...*
+###### Keynote Navigation:
+First level: Main slides: Use the *Left* & *Right* buttons
+Main slides may have children: Use the *Up* & *Down* buttons
 * * *
 #### So now PRESS the *Down* Button
 ----

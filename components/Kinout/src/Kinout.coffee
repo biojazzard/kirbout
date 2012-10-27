@@ -18,5 +18,4 @@ KINOUT =
         @Url.read()
         return
 
-
 window.KINOUT = KINOUT
