@@ -40,15 +40,14 @@ style:
 	recess ./src/less/theme.kinout.less --compress > ./css/theme.kinout.min.css
 	recess ./src/less/kinout.less --compile > ./css/kinout-1.0.css
 	recess ./src/less/kinout.less --compress > ./css/kinout-1.0.min.css
-	cat ./css/kinout-1.0.min.css ./css/theme.kinout.min.css assets/javascript/rainbow/themes/blackboard.css > ./css/style.min.css
+	cat ./css/kinout-1.0.min.css ./css/theme.kinout.min.css > ./css/style.min.css
 	@echo "\n${HR} Building Styles ${HR}\n"
 
 script:
 	clear
 	@echo "\n${HR} Building Scripts ${HR}"
-	coffee --output ./js/js.script.js --compile ./src/script.coffee
-	# cat ${CMP}${QUO_BUILD}quojs.max.js assets/javascript/raf.js ${CMP}${KINOUT_BUILD}kinout.max.js assets/javascript/rainbow/rainbow.min.js assets/javascript/rainbow/language/generic.js ./src/js/js.script.js > ./js/script.js
-	cat ${CMP}${QUO_BUILD}quojs.max.js ${CMP}${RAF_BUILD}Raf.js ${CMP}${KINOUT_BUILD}kinout.max.js assets/javascript/rainbow/rainbow.min.js assets/javascript/rainbow/language/generic.js ./src/js/js.script.js > ./js/script.js
+	coffee --output ./js/ --compile ./src/js.script.coffee
+	cat ${CMP}${QUO_BUILD}quojs.max.js ${CMP}${RAF_BUILD}Raf.js ${CMP}${KINOUT_BUILD}kinout.max.js ./js/js.script.js > ./js/script.js
 	uglifyjs -nc ./js/script.js > ./js/script.min.js
 	@echo "\n${HR} Building Styles ${HR}\n"
 

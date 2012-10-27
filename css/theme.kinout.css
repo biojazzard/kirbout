@@ -103,6 +103,15 @@ body {
 }
 
 .kinout pre {
+  padding: 0;
+  padding: 10px;
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: 'Monaco', courier, monospace;
+  font-size: 14px;
+  color: #ffffff;
+  word-wrap: break-word;
+  background: #0b1022;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
@@ -112,4 +121,50 @@ body {
   -webkit-background-clip: padding-box;
      -moz-background-clip: padding;
           background-clip: padding-box;
+}
+
+.kinout pre .string,
+.kinout pre .comment.docstring {
+  color: #61ce3c;
+}
+
+.kinout pre .string.regexp,
+.kinout pre .support.tag.script,
+.kinout pre .support.tag.style {
+  color: #ffffff;
+}
+
+.kinout pre .keyword,
+.kinout pre .selector {
+  color: #fbde2d;
+}
+
+.kinout pre .variable.global,
+.kinout pre .variable.class,
+.kinout pre .variable.instance {
+  color: #ff6400;
+}
+
+.kinout pre .comment {
+  color: #727272;
+}
+
+.kinout pre .constant {
+  color: #d8fa3c;
+}
+
+.kinout pre .storage {
+  color: #fbde2d;
+}
+
+.kinout pre .inherited-class {
+  font-style: italic;
+}
+
+.kinout pre .entity {
+  color: #ff6400;
+}
+
+.kinout code {
+  font-family: 'Monaco', courier, monospace;
 }

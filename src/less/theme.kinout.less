@@ -2,86 +2,125 @@
 @import "variables.less";
 
 body {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 .kinout {
-    background-color: @bgcolor;
-    color: @white;
-    font-family: @defaultFont;
+  background-color: @bgcolor;
+  color: @white;
+  font-family: @defaultFont;
 
-    & header,
-    & footer {
-        font-weight: 200;
-        & h1,
-        & h2,
-        & h3,
-        & h4,
-        & h5 {
-            font-size: 20px;
-            color: darken(@white, 5%);
-        }
-        p {
-            font-size: 16px;
-        }
-        a {
-            color: lighten(@orange, 5%);
-        }
-    }
-
-    & mark,
-    & em {
-        color: @orange;
-    }
-
-    & progress span {
-        background: @orange;
-    }
-
+  & header,
+  & footer {
+    font-weight: 200;
     & h1,
     & h2,
     & h3,
     & h4,
-    & h5,
-    & h6 {
-        .text-shadow(0px 1px 0px rgba(0,0,0,0.5));
+    & h5 {
+      font-size: 20px;
+      color: darken(@white, 5%);
     }
-
     p {
-        font-weight: 200;
-        font-size: 18px;
+      font-size: 16px;
     }
+    a {
+      color: lighten(@orange, 5%);
+    }
+  }
 
-    hr {
-        height: 12px;
-        border: none;
-    }
+  & mark,
+  & em {
+    color: @orange;
+  }
 
-    & .box.white { color: @white; }
+  & progress span {
+    background: @orange;
+  }
 
-    & a {
-        color: rgba(255,255,255,1);
-        &:hover, &:active { color: @white; }
-    }
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    .text-shadow(0px 1px 0px rgba(0,0,0,0.5));
+  }
 
-    & .box { .box-shadow(0px 4px 8px rgba(0,0,0,0.5)); }
-    & .bordered {
-        border: solid 8px @white;
+  p {
+    font-weight: 200;
+    font-size: 18px;
+  }
+
+  hr {
+    height: 12px;
+    border: none;
+  }
+
+  & .box.white { color: @white; }
+
+  & a {
+    color: rgba(255,255,255,1);
+    &:hover, &:active { color: @white; }
+  }
+
+  & .box { .box-shadow(0px 4px 8px rgba(0,0,0,0.5)); }
+  & .bordered {
+    border: solid 8px @white;
+  }
+  .slide-title,
+  .sub-slide-title {
+    position: relative;
+    margin-top: 0;
+    color: darken(@white, 5%);
+    font-size: 16px;
+    font-weight: 200;
+  }
+  .copyright {
+    display: none;
+    font-family: @kinoutFont;
+  }
+  pre {
+    .border-radius(4px);
+    .box-shadow(0px 4px 8px rgba(0,0,0,0.5));
+    background:#0b1022;
+    word-wrap:break-word;
+    margin:0px;
+    padding:0px;
+    padding:10px;
+    color:#ffffff;
+    font-size:14px;
+    margin-bottom:20px;
+    font-family:'Monaco', courier, monospace;
+    .string, .comment.docstring {
+    color:#61ce3c;
     }
-    .slide-title,
-    .sub-slide-title {
-        position: relative;
-        margin-top: 0;
-        color: darken(@white, 5%);
-        font-size: 16px;
-        font-weight: 200;
+    .string.regexp, .support.tag.script, .support.tag.style {
+    color:#ffffff;
     }
-    .copyright {
-        display: none;
-        font-family: @kinoutFont;
+    .keyword, .selector {
+    color:#fbde2d;
     }
-    pre {
-        .border-radius(4px);
-        .box-shadow(0px 4px 8px rgba(0,0,0,0.5));
+    .variable.global, .variable.class, .variable.instance {
+    color:#ff6400;
     }
+    .comment {
+    color:#727272;
+    }
+    .constant {
+    color:#d8fa3c;
+    }
+    .storage {
+    color:#fbde2d;
+    }
+    .inherited-class {
+    font-style:italic;
+    }
+    .entity {
+    color:#ff6400;
+    }
+  }
+  code {
+    font-family:'Monaco', courier, monospace;
+  }
 }

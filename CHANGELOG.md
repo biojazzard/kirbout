@@ -1,3 +1,6 @@
+### 1.1.2 (27 Oct 2012)
+    * Removed Rainbow support.
+
 ### 1.1.1 (27 Oct 2012)
     * Added conent.
 
