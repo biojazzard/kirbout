@@ -158,7 +158,7 @@ or markdown extra: http://michelf.com/projects/php-markdown/extra/
 
 c::set('markdown', true);
 c::set('markdown.breaks', true);
-c::set('markdown.extra', false);
+c::set('markdown.extra', true);
 
 
 /* 
@@ -404,8 +404,8 @@ default language.
 */
 
 c::set('lang.support', false);
-c::set('lang.default', 'en');
-c::set('lang.available', array('en', 'de'));
+c::set('lang.default', 'es');
+c::set('lang.available', array('es', 'en'));
 c::set('lang.detect', true);
 
 
@@ -421,7 +421,7 @@ else than txt. For example md or mdown.
 
 */
 
-c::set('content.file.extension', 'txt');
+c::set('content.file.extension', 'md');
 
 
 /*

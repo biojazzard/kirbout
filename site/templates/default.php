@@ -25,7 +25,9 @@ snippet('header');
           </footer>
           <?php endif ?>
           <?php /* Slide Render */ ?>
-          <div class="slide-body"><?php echo kirbytext($mainItem->text()) ?></div>
+          <div class="slide-body">
+            <?php echo kirbytext($mainItem->text()) ?>
+          </div>
         </article>
         <?php endif ?>
         <?php /* The rest of the articles with UP & down */ ?>

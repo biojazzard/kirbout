@@ -1694,18 +1694,26 @@
     _left = function() {
       _index.horizontal--;
       knt.View.slide(_index.horizontal, 0, false);
+      console.log(_index.horizontal);
+      console.log(_index.vertical);
     };
     _right = function() {
       _index.horizontal++;
       knt.View.slide(_index.horizontal, 0);
+      console.log(_index.horizontal);
+      console.log(_index.vertical);
     };
     _up = function() {
       _index.vertical--;
       knt.View.slide(_index.horizontal, _index.vertical, false);
+      console.log(_index.horizontal);
+      console.log(_index.vertical);
     };
     _down = function() {
       _index.vertical++;
       knt.View.slide(_index.horizontal, _index.vertical);
+      console.log(_index.horizontal);
+      console.log(_index.vertical);
     };
     return {
       direction: direction
