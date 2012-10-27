@@ -1,23 +1,22 @@
 Title: Learn kirb*out*
 ----
 Text:
-###### 9.- Tables
-Tables *&lt;table&gt;*
-<pre>
-| First Header  | Second Header | -> table > th > td [ 2x3 ]
-| ------------- | --------------|
-| Content Cell  | Content Cell  | -> table > tr > td
-| Content Cell  | Content Cell  | -> table > tr > td
-</pre>
-Column *Align*
-Add a semicolon left or right:
-<pre>
-| Item      | Value |
-| --------- | -----:|
-| Computer  | $1600 |
-| Phone     |   $12 |
-| Pipe      |    $1 |
-</pre>
+###### 1.- Markdown Inside *&lt;html&gt;* Blocks 
+Adding *markdown="1"* attr
+```
+<div markdown="1">
+This is **true** [markdown][id] text.
+</div>
+```
+Adding *markdown="1"* attr to a *&lt;td&gt;*
+```
+<table>
+<tr>
+<td markdown="1">This is *true* markdown text.</td>
+</tr>
+</table>
+```
+* * *
 ###### *Up* & *Down* Button Availiable
 ----
 Header:

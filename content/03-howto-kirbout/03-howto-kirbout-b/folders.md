@@ -15,8 +15,8 @@ Add Folders with an ordered letter suffix.
 |               | 02-sub-slide-b ----| junior.md (children)
 |               | 02-sub-slide-c ----| senior.md (children)
 ```
-###### _*.md_ names are not used)
-(Use _*.md_ file names as you want.)
+###### (_*.md_ names are not used)
+(Use _*.md_ file names as you want)
 * * *
 #### So now PRESS the *Down* Button
 ----

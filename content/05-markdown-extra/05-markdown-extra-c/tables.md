@@ -1,25 +1,23 @@
 Title: Learn kirb*out*
 ----
 Text:
-###### 7.- Lists
-Ordered lists *&lt;ol&gt;*
-```
-1. item 1
-2. item 2
-renders as ->
-<ol>
-    <li>item 1</li>
-    <li>item 2</li>
-</ol>
-```
-Nestings
-```
-1. item 1                  <ol><li>item 1</li>
-  - item 1.a                   <ul><li>item 1.a</li>
-  - item 1.b       =>              <li>item 1.b</li></ul>
-2. item 2                       <li>item 1</li>
-                           </ol>
-```
+###### 3.- Tables
+Tables *&lt;table&gt;*
+<pre>
+| First Header  | Second Header | -> table > th > td [ 2x3 ]
+| ------------- | --------------|
+| Content Cell  | Content Cell  | -> table > tr > td
+| Content Cell  | Content Cell  | -> table > tr > td
+</pre>
+Column *Align*
+Add a semicolon left or right:
+<pre>
+| Item      | Value |
+| --------- | -----:|
+| Computer  | $1600 |
+| Phone     |   $12 |
+| Pipe      |    $1 |
+</pre>
 ###### *Up* & *Down* Button Availiable
 ----
 Header:

@@ -1,22 +1,20 @@
 Title: Learn kirb*out*
 ----
 Text:
-###### 8.- Code
-Code Window *&lt;pre&gt;*
-Wrap it in a *&#96;&#96;&#96;*
-<pre>
-&#96;&#96;&#96;
-this.awesome();
-&#96;&#96;&#96;
-</pre>
-You can also wrap it in a *pre* tag
-<pre>
-&lt;pre&gt;
-  this.awesome();
-&lt;/pre&gt;
-</pre>
-Using *&lt;pre&gt;* is considered *safer*
-* * *
+###### 4.- Miscellanea
+Footnotes
+```
+Text with a footnote.[^1]
+
+Extra paragraph.
+
+[^1]: Footnote here.
+```
+Abbreviations
+```
+*[HTML]: Hyper Text Markup Language
+*[W3C]:  World Wide Web Consortium
+```
 #### Now you can PRESS the *Right* Button
 ----
 Header:

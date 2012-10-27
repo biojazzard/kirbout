@@ -1,23 +1,26 @@
 Title: Learn kirb*out*
 ----
 Text:
-###### 8.- Code
-Code Window *&lt;pre&gt;*
-Wrap it in a *&#96;&#96;&#96;*
+###### 4.- Definition *Lists*
+Tables *&lt;dl&gt;, &lt;dt&gt;*
 <pre>
-&#96;&#96;&#96;
-this.awesome();
-&#96;&#96;&#96;
+Term 1
+
+:   Definition 1 for Term 1
+
+    > quote here
+
+:   Definition 2 for Term 2
+
+    1.  Case 1
+    2.  Case 2
+
+Term 2
+Term 3
+
+:   Both Term 2 and Term 3 share this def.
 </pre>
-You can also wrap it in a *pre* tag
-<pre>
-&lt;pre&gt;
-  this.awesome();
-&lt;/pre&gt;
-</pre>
-Using *&lt;pre&gt;* is considered *safer*
-* * *
-#### Now you can PRESS the *Right* Button
+###### *Up* & *Down* Button Availiable
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)
