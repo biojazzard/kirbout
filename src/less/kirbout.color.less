@@ -1,0 +1,75 @@
+
+/* 
+ * Extension to BS
+ */
+
+.bgtransp (dark, @color) {
+  background-color: darken(@color, 50%);
+}
+.bgtransp (light, @color) {
+  background-color: lighten(@color, 50%);
+}
+
+.type (dark, @color) {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 200;
+    color: darken(@color, 50%);
+  }
+}
+.type (light, @color) {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 200;
+    color: lighten(@color, 50%);
+  }
+}
+
+/* namespaced color ops. */
+
+#colors {
+
+  .bg (@baseColor, @stepNumber) {
+
+    .color-X (@index) when (@index > 0) {
+      (~".bg-color-@{index}") { .bg-color-(@index); }
+      .color-X(@index - 1);
+    }
+
+    .color-X (0) {
+      (~".bg-color-0") { .bg-color-(0); }
+    }
+
+    .bg-color-(@steps) {
+      @tempColor: spin(@baseColor, (360/@stepNumber) * @steps);
+      #gradient > .horizontal(@tempColor, lighten(spin(@tempColor, (360/@stepNumber)), 10%));
+    }
+
+    // generate
+    .color-X (@stepNumber);
+
+  }
+
+  .grayscale (@baseColor, @stepNumber) {
+
+    .grayscale-X (@index) when (@index > 0) {
+      (~".bg-grayscale-@{index}") {
+        .bg-grayscale-(@index);
+      }
+      .grayscale-X(@index - 1);
+    }
+
+    .grayscale-X (0) {
+      (~".bg-grayscale-0") { .bg-grayscale-(0); }
+    }
+
+    .bg-grayscale-(@steps) {
+      @tempColor: lighten(@baseColor, (100/@stepNumber) * @steps);
+      #gradient > .horizontal(@tempColor, lighten(@tempColor, 10%));
+    }
+
+    // generate
+    .grayscale-X (@stepNumber);
+
+  }
+
+}
+

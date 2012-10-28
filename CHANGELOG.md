@@ -1,3 +1,6 @@
+### 1.2.0 (28 Oct 2012)
+    * Move to a kirbout namespace.
+
 ### 1.1.2 (27 Oct 2012)
     * Removed Rainbow support.
 

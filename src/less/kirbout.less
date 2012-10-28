@@ -1,0 +1,29 @@
+// Variables
+
+@preffix: "kirbout";
+
+#ref {
+  .build (@preffix) {
+    //@import ~"@{preffix}print.less";
+    ("@{preffix}print.less") {
+      
+    }
+  }
+}
+
+// Common
+@import "kirbout.variables.less";
+@import "kirbout.reset.less";
+@import "kirbout.mixins.less";
+@import "kirbout.color.less";
+
+// Theme
+
+@import "kirbout.layout.less";
+@import "kirbout.theme.less";
+
+// Widgets
+@import "kirbout.widgets.less";
+//
+@import "kirbout.print.less";
+

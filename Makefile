@@ -35,12 +35,14 @@ HR = "--------------------------"
 
 style:
 	clear
-	@echo "\n${HR} Building Styles ${HR}"
-	recess ./src/less/theme.kinout.less --compile > ./css/theme.kinout.css
-	recess ./src/less/theme.kinout.less --compress > ./css/theme.kinout.min.css
-	recess ./src/less/kinout.less --compile > ./css/kinout-1.0.css
-	recess ./src/less/kinout.less --compress > ./css/kinout-1.0.min.css
-	cat ./css/kinout-1.0.min.css ./css/theme.kinout.min.css > ./css/style.min.css
+	@echo "\n${HR} Building Kirbout Styles ${HR}"
+	# recess ./src/less/theme.kinout.less --compile > ./css/theme.kinout.css
+	# recess ./src/less/theme.kinout.less --compress > ./css/theme.kinout.min.css
+	# recess ./src/less/kinout.less --compile > ./css/kinout-1.0.css
+	# recess ./src/less/kinout.less --compress > ./css/kinout-1.0.min.css
+	recess ./src/less/kirbout.less --compile > ./css/style.css
+	recess ./src/less/kirbout.less --compress > ./css/style.min.css
+	# cat ./css/kinout-1.0.min.css ./css/theme.kinout.min.css > ./css/style.min.css
 	@echo "\n${HR} Building Styles ${HR}\n"
 
 script:
