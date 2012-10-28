@@ -19,7 +19,6 @@ You can find all *TEH* Sildes content there.
 First level: Main slides: Use the *Left* & *Right* buttons
 Main slides may have children: Use the *Up* & *Down* buttons
 * * *
-###### So now PRESS the *Down* Button
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

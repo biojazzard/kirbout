@@ -53,7 +53,8 @@
       PROGRESS: {
         horizontal: "<div class='progress horizontal' value='0' max='100'><span></span></div>",
         vertical: "<div class='progress vertical' value='0' max='100'><span></span></div>"
-      }
+      },
+      KEYBOARD: "<div class='keyboard'><div class='btn-group'><button class='btn spacer'>&nbsp;</button><button class='btn up'>Up &uarr;</button><button class='btn spacer'>&nbsp;</button></div><div class='btn-group'><button class='btn left'>&larr; Left</button><button class='btn down'>Down &darr;</button><button class='btn right'>Right &rarr;</button></div></div>"
     },
     SELECTOR: {
       KINOUT: ".kirbout",
@@ -65,6 +66,12 @@
       PROGRESS: {
         horizontal: ".progress.horizontal",
         vertical: ".progress.vertical"
+      },
+      KEYBOARD: {
+        left: ".btn.left",
+        right: ".btn.right",
+        up: ".btn.up",
+        down: ".btn.down"
       }
     },
     STYLE: {
@@ -90,7 +97,7 @@
 (function() {
 
   KINOUT.Element = (function(knt, undefined_) {
-    var MARKUP, SELECTOR, init, progress, slides, steps, subslides, _el, _nextStep, _previousStep;
+    var MARKUP, SELECTOR, init, progress, slides, steps, subslides, _down, _el, _left, _nextStep, _previousStep, _right, _up;
     SELECTOR = knt.Constants.SELECTOR;
     MARKUP = knt.Constants.MARKUP;
     _el = {
@@ -107,7 +114,7 @@
       if (config.template) {
         _el.parent.addClass(config.template);
       }
-      return _el.parent.prepend(MARKUP.GLOW).append(MARKUP.COPYRIGHT);
+      return _el.parent.prepend(MARKUP.GLOW).append(MARKUP.KEYBOARD);
     };
     slides = function() {
       if (!(_el.slides.length > 0)) {
@@ -124,6 +131,18 @@
       } else {
         return _previousStep();
       }
+    };
+    _left = function() {
+      return $$(SELECTOR.KEYBOARD.left);
+    };
+    _right = function() {
+      return $$(SELECTOR.KEYBOARD.right);
+    };
+    _up = function() {
+      return $$(SELECTOR.KEYBOARD.up);
+    };
+    _down = function() {
+      return $$(SELECTOR.KEYBOARD.down);
     };
     progress = function(type, value) {
       var property;
@@ -443,7 +462,7 @@
 (function() {
 
   KINOUT.View = (function(knt, $$, undefined_) {
-    var SELECTOR, STYLE, index, render, slide, _index, _saveNewIndexes, _steps, _updateProgress, _updateSlideIndexes, _updateSlides;
+    var SELECTOR, STYLE, index, render, slide, _index, _renderKeyboard, _saveNewIndexes, _steps, _updateProgress, _updateSlideIndexes, _updateSlides;
     SELECTOR = knt.Constants.SELECTOR;
     STYLE = knt.Constants.STYLE;
     _index = knt.index;
@@ -455,8 +474,40 @@
       if (!knt.Element.steps(next_step)) {
         _saveNewIndexes(horizontal, vertical);
         _updateSlideIndexes();
+        _renderKeyboard(horizontal, vertical);
         knt.Url.write(_index.horizontal, _index.vertical);
       }
+    };
+    _renderKeyboard = function(horizontal, vertical) {
+      var nSlides, nSubSlides;
+      nSlides = knt.Element.slides().length;
+      nSubSlides = knt.Element.subslides(horizontal).length;
+      if (horizontal > 0 && horizontal < (nSlides - 1)) {
+        $$(SELECTOR.KEYBOARD.left).removeClass('enabled').addClass('enabled');
+        $$(SELECTOR.KEYBOARD.right).removeClass('enabled').addClass('enabled');
+      } else if (horizontal <= 0) {
+        $$(SELECTOR.KEYBOARD.left).removeClass('enabled');
+        $$(SELECTOR.KEYBOARD.right).removeClass('enabled').addClass('enabled');
+      } else if (horizontal >= (nSlides - 1)) {
+        $$(SELECTOR.KEYBOARD.left).removeClass('enabled').addClass('enabled');
+        $$(SELECTOR.KEYBOARD.right).removeClass('enabled');
+      }
+      if (!isNaN(nSubSlides) && nSubSlides > 1) {
+        if (vertical > 0 && vertical < (nSubSlides - 1)) {
+          $$(SELECTOR.KEYBOARD.up).removeClass('enabled').addClass('enabled');
+          $$(SELECTOR.KEYBOARD.down).removeClass('enabled').addClass('enabled');
+        } else if (vertical <= 0) {
+          $$(SELECTOR.KEYBOARD.up).removeClass('enabled');
+          $$(SELECTOR.KEYBOARD.down).removeClass('enabled').addClass('enabled');
+        } else if (vertical >= (nSubSlides - 1)) {
+          $$(SELECTOR.KEYBOARD.up).removeClass('enabled').addClass('enabled');
+          $$(SELECTOR.KEYBOARD.down).removeClass('enabled');
+        }
+      } else {
+        $$(SELECTOR.KEYBOARD.up).removeClass('enabled');
+        $$(SELECTOR.KEYBOARD.down).removeClass('enabled');
+      }
+      console.log('horizontal:' + horizontal + '|' + (nSlides - 1) + ' || vertical:' + vertical + '|' + (nSubSlides - 1));
     };
     index = function() {
       return {

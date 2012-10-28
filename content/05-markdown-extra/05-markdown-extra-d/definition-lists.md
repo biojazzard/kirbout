@@ -20,7 +20,6 @@ Term 3
 
 :   Both Term 2 and Term 3 share this def.
 </pre>
-###### *Up* & *Down* Button Availiable
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

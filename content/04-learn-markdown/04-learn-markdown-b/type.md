@@ -22,7 +22,6 @@ __ This is a strong __
 
 <strong>This is a strong</strong>
 ```
-###### *Up* & *Down* Button Availiable
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

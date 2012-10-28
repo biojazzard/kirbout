@@ -19,7 +19,41 @@ KINOUT.View = ((knt, $$, undefined_) ->
         unless knt.Element.steps(next_step)
             _saveNewIndexes horizontal, vertical
             _updateSlideIndexes()
+            _renderKeyboard horizontal, vertical
             knt.Url.write _index.horizontal, _index.vertical
+        return
+
+    _renderKeyboard = (horizontal, vertical) ->
+
+        BTN = SELECTOR.KEYBOARD
+        nSlides = knt.Element.slides().length;
+        nSubSlides = knt.Element.subslides(horizontal).length
+
+        if horizontal > 0 && horizontal < (nSlides - 1)
+            $$(BTN.left).removeClass('enabled').addClass('enabled')
+            $$(BTN.right).removeClass('enabled').addClass('enabled')
+        else if horizontal <= 0
+            $$(BTN.left).removeClass('enabled')
+            $$(BTN.right).removeClass('enabled').addClass('enabled')
+        else if  horizontal >= (nSlides - 1)
+            $$(BTN.left).removeClass('enabled').addClass('enabled')
+            $$(BTN.right).removeClass('enabled')
+        
+        if !isNaN(nSubSlides) && nSubSlides > 1
+            if vertical > 0 && vertical < (nSubSlides - 1)
+                $$(BTN.up).removeClass('enabled').addClass('enabled')
+                $$(BTN.down).removeClass('enabled').addClass('enabled')
+            else if vertical <= 0
+                $$(BTN.up).removeClass('enabled')
+                $$(BTN.down).removeClass('enabled').addClass('enabled')
+            else if vertical >= (nSubSlides - 1)
+                $$(BTN.up).removeClass('enabled').addClass('enabled')
+                $$(BTN.down).removeClass('enabled')
+        else
+            $$(BTN.up).removeClass('enabled')
+            $$(BTN.down).removeClass('enabled')
+
+        # console.log('horizontal:' + horizontal + '|' + (nSlides-1) + ' || vertical:' + vertical + '|' + (nSubSlides-1))
         return
 
     index = ->

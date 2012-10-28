@@ -18,7 +18,6 @@ Add a semicolon left or right:
 | Phone     |   $12 |
 | Pipe      |    $1 |
 </pre>
-###### *Up* & *Down* Button Availiable
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

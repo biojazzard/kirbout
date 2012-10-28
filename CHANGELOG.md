@@ -1,3 +1,6 @@
+### 1.2.2 (28 Oct 2012)
+    * Keyboard helper added.
+
 ### 1.2.1 (28 Oct 2012)
     * Moved al Sources to /src indep. /components
 

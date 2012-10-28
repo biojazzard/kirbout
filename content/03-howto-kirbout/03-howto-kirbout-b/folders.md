@@ -18,7 +18,6 @@ Add Folders with an ordered letter suffix.
 ###### _*.md_ names are not used
 (Use _*.md_ file names as you want)
 * * *
-###### So now PRESS the *Down* Button
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

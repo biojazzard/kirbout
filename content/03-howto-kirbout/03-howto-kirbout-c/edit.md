@@ -18,7 +18,6 @@ Text:
 * * *
 Basically, *Markdown* between the *Text:* and the closing *&#45;&#45;&#45;&#45;*.
 * * *
-###### PRESS the *Down* Button
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

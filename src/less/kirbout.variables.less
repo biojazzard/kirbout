@@ -1,7 +1,13 @@
-// Theme
-// Values: dark, light;
+/*
+ * Theme ------------------------------------------------------|
+ */
+
 @theme: dark;
-// Variables
+
+/*
+ * Grayscale --------------------------------------------------|
+ */
+
 @white:             #fefefe;
 @grayLighter:       #cecece;
 @grayLight:         #7e7e7e;
@@ -10,9 +16,12 @@
 @blackLight:        #242424;
 @black:             #0B1022;
 
-// Accent Colors
+/*
+ * Colors -----------------------------------------------------|
+ */
+
 @blue:              #08b5fb;
-@green:             #2E8F65; //Verde
+@green:             #2E8F65;
 @red:               #9d261d;
 @yellow:            #ffc40d;
 @orange:            #FFC507;
@@ -21,17 +30,30 @@
 
 @bgcolor:           @green;
 
-// Math
+/*
+ * Math --------------------------------------------------------|
+ */
 
 @fi:                1.61803398;
 
-// Dimensions
-@kinout_width: 1150px;
-@kinout_height: @kinout_width/@fi;
+/*
+ * Dimensions --------------------------------------------------|
+ */
+
+@kinout_width:       1150px;
+@kinout_height:      @kinout_width/@fi;
+
 //@article_height: 504px;
 
-//
+/*
+ * Transition --------------------------------------------------|
+ */
+
 @defaultTrasition:  @easeOutSine;
+
+/*
+ * Fonts -------------------------------------------------------|
+ */
 
 @defaultFont:       'Source Sans Pro', 'Helvetica Neue', Helvetica, sans-serif;
 @monoFont:          'Monaco', courier, monospace;

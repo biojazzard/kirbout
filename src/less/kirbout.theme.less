@@ -51,6 +51,10 @@
     &:active {
       color: darken(@white, 2%);
     }
+    &:after {
+      content: "\005B\219D\005D";
+      color: @orange;
+    }
   }
 
   h1, h2, h3, h4, h5 {
@@ -125,14 +129,5 @@
   & .box { .box-shadow(0px 4px 8px rgba(0,0,0,0.5)); }
   & .bordered {
     border: solid 8px @white;
-  }
-
-  .copyright {
-    display: none;
-    position: absolute;
-    bottom: 2%;
-    right: 1.5%;
-    width: 10%;
-    z-index: 1980;
   }
 }

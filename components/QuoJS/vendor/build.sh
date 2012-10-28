@@ -4,8 +4,9 @@
 COMPILER=google-compiler/compiler.jar
 LUNGO_SOURCES=../src/build/
 LUNGO_NAMESPACE=quo.
-BUILDPATH=../package
+BUILDPATH=../package/
 MINIFIED="min"
+PACKED="packed"
 
 #script
 clear
@@ -25,10 +26,10 @@ do
 done
 
 #UNCOMPRESED
-#cat $FILES_TO_JOIN > $LUNGO_SOURCES/quo.debug.js
-#echo -e "\033[32m  [BUILD]: quo.debug.js\033[0m"
+cat $FILES_TO_JOIN > $BUILDPATH/quo.debug.js
+echo -e "\033[32m  [BUILD]: quo.debug.js\033[0m"
 
 #MINIFIED
-java -jar $COMPILER $LUNGO_SOURCES --js_output_file $BUILDPATH/quo.js
+java -jar $COMPILER $FILES_TO_COMPILE --js_output_file $BUILDPATH/quo.js
 echo -e "\033[32m  [BUILD]: quo".js"\033[0m"
 echo ============================ /QUOJS COMPILER ============================

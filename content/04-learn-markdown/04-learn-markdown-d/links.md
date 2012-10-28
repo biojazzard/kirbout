@@ -21,7 +21,6 @@ referenced as -> (ex: at the bottom of the File)
 renders as->
 <a href="http://biojazzard.github.com/kirbout">http://biojazzard.github.com/kirbout</a>
 ```
-###### *Up* & *Down* Button Availiable
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

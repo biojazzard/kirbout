@@ -13,7 +13,7 @@
 (function() {
 
   KINOUT.Element = (function(knt, undefined_) {
-    var MARKUP, SELECTOR, init, progress, slides, steps, subslides, _el, _nextStep, _previousStep;
+    var MARKUP, SELECTOR, init, progress, slides, steps, subslides, _down, _el, _left, _nextStep, _previousStep, _right, _up;
     SELECTOR = knt.Constants.SELECTOR;
     MARKUP = knt.Constants.MARKUP;
     _el = {
@@ -30,7 +30,7 @@
       if (config.template) {
         _el.parent.addClass(config.template);
       }
-      return _el.parent.prepend(MARKUP.GLOW).append(MARKUP.COPYRIGHT);
+      return _el.parent.prepend(MARKUP.GLOW).append(MARKUP.KEYBOARD);
     };
     slides = function() {
       if (!(_el.slides.length > 0)) {
@@ -47,6 +47,18 @@
       } else {
         return _previousStep();
       }
+    };
+    _left = function() {
+      return $$(SELECTOR.KEYBOARD.left);
+    };
+    _right = function() {
+      return $$(SELECTOR.KEYBOARD.right);
+    };
+    _up = function() {
+      return $$(SELECTOR.KEYBOARD.up);
+    };
+    _down = function() {
+      return $$(SELECTOR.KEYBOARD.down);
     };
     progress = function(type, value) {
       var property;

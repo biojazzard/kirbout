@@ -22,7 +22,6 @@ Nestings
 + item 2                      <li>item 1</li>
                           </ul>
 ```
-###### *Up* & *Down* Button Availiable
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

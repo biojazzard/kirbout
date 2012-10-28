@@ -17,7 +17,6 @@ Footer:
 They can be located anywhere in the document,
 as long as they are properly closed: _&#45;&#45;&#45;&#45;_ !!!
 * * *
-###### PRESS the *Down* Button
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

@@ -19,7 +19,6 @@ Horizontal Rules *&lt;hr&gt;*
 * * *
 ***
 ```
-###### *Up* & *Down* Button Availiable
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

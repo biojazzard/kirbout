@@ -21,7 +21,6 @@ renders as ->
 <h1 id="header1">This is a header 1</h1>
 ```
 * * *
-###### *Up* & *Down* Button Availiable
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

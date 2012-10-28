@@ -22,13 +22,7 @@ When the block element is found inside a list,
 all its content should be indented with the same amount of space as the list item is indented.
 (More indentation won’t do any harm as long as the first opening tag
 is not indented too much and then become a code block — see first rule.)
-
-
-
-
-
 * * *
-###### *Up* & *Down* Button Availiable
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

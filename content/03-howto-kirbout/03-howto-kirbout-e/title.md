@@ -14,7 +14,6 @@ Title: ## Real Title
 Yes, you can use Markdown here also.
 And of course, don´t forget to close it: *&#45;&#45;&#45;&#45;* !!!
 * * *
-###### Now you can PRESS the *Right* Button
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

@@ -16,6 +16,7 @@ KINOUT.Constants =
         PROGRESS:
             horizontal: "<div class='progress horizontal' value='0' max='100'><span></span></div>"
             vertical: "<div class='progress vertical' value='0' max='100'><span></span></div>"
+        KEYBOARD: "<div class='keyboard'><div class='btn-group'><button class='btn spacer'>&nbsp;</button><button class='btn up'>Up &uarr;</button><button class='btn spacer'>&nbsp;</button></div><div class='btn-group'><button class='btn left'>&larr; Left</button><button class='btn down'>Down &darr;</button><button class='btn right'>Right &rarr;</button></div></div>"
 
     SELECTOR:
         KINOUT: ".kirbout"
@@ -29,6 +30,12 @@ KINOUT.Constants =
         PROGRESS:
             horizontal: ".progress.horizontal"
             vertical: ".progress.vertical"
+        
+        KEYBOARD:
+            left: ".btn.left"
+            right: ".btn.right"
+            up: ".btn.up"
+            down: ".btn.down"
 
     STYLE:
         PAST: "past"

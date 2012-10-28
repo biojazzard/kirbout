@@ -2,9 +2,8 @@ Title: Learn kirb*out*
 ----
 Text:
 # Markdown *Extra*
-#### [*Markdown* extension *[?]*](http://michelf.ca/projects/php-markdown/extra/)
+#### [*Markdown* extension](http://michelf.ca/projects/php-markdown/extra/)
 * * *
-###### PRESS the *Down* Button
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

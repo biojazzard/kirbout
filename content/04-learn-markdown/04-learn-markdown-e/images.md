@@ -19,7 +19,6 @@ Simple
 
 <img src="/path/file.img">
 ```
-###### *Up* & *Down* Button Availiable
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

@@ -1,8 +1,33 @@
 {
   "name": "kirbout",
-  "version": "1.2.0",
+  "description": "Markdown File Based html5 Keynote System served with PHP.",
+  "version": "1.2.2",
+  "keywords": [
+    "Markdown",
+    "html5",
+    "Keynote",
+    "PHP"
+  ],
+  "homepage": "http://biojazzard.github.com/kirbout/",
+  "author": {
+    "name": "@biojazzard"
+  },
+  "scripts": {
+    "test": "make test"
+  },
   "main": ["./css/style.min.css", "./js/script.min.js", "./img/dot-a.png"],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/twitter/bootstrap.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
   "dependencies": {
+    "bootstrap": "~2.1.1",
     "Kinout": {
       "source": {
         "type": "git",
@@ -27,5 +52,15 @@
         "url": "git://github.com/biojazzard/raf-coffeescript.git"
       }
     }
-  }
+  },
+  "devDependencies": {
+    "uglify-js": "1.2.6",
+    "jshint": "0.6.1",
+    "recess": "1.0.3",
+    "connect": "2.1.3",
+    "watchr": "0.7"
+  },
+  "readme": "[Repo](https://github.com/biojazzard/kirbout/) [Demo](http://biojazzard.github.com/kirbout)trap.png)]\n",
+  "readmeFilename": "README.md",
+  "_id": "kirbout@1.2.2",
 }

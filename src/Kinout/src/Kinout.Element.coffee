@@ -23,7 +23,8 @@ KINOUT.Element = ((knt, undefined_) ->
     init = (config) ->
         _el.parent = $$(SELECTOR.KINOUT)
         _el.parent.addClass(config.template) if config.template
-        _el.parent.prepend(MARKUP.GLOW).append(MARKUP.COPYRIGHT)
+        _el.parent.prepend(MARKUP.GLOW).append(MARKUP.KEYBOARD)
+        #.append(MARKUP.COPYRIGHT).append(MARKUP.CREDITS)
 
     slides = () ->
         unless _el.slides.length > 0
@@ -33,6 +34,14 @@ KINOUT.Element = ((knt, undefined_) ->
     subslides = (slide_index) -> $$(_el.slides[slide_index]).children('article')
 
     steps = (next) -> if (next) then _nextStep() else _previousStep()
+
+    _left = () -> $$(SELECTOR.KEYBOARD.left)
+
+    _right = () -> $$(SELECTOR.KEYBOARD.right)
+
+    _up = () -> $$(SELECTOR.KEYBOARD.up)
+    
+    _down = () -> $$(SELECTOR.KEYBOARD.down)
 
     progress = (type = "horizontal", value = 0) ->
         unless _el.progress[type]

@@ -17,7 +17,6 @@ You can also wrap it in a *pre* tag
 </pre>
 Using *&lt;pre&gt;* is considered *safer*
 * * *
-###### Now you can PRESS the *Right* Button
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

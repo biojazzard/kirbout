@@ -17,7 +17,6 @@ Adding *markdown="1"* attr to a *&lt;td&gt;*
 </table>
 ```
 * * *
-###### *Up* & *Down* Button Availiable
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

@@ -13,7 +13,7 @@
 (function() {
 
   KINOUT.View = (function(knt, $$, undefined_) {
-    var SELECTOR, STYLE, index, render, slide, _index, _saveNewIndexes, _steps, _updateProgress, _updateSlideIndexes, _updateSlides;
+    var SELECTOR, STYLE, index, render, slide, _index, _renderKeyboard, _saveNewIndexes, _steps, _updateProgress, _updateSlideIndexes, _updateSlides;
     SELECTOR = knt.Constants.SELECTOR;
     STYLE = knt.Constants.STYLE;
     _index = knt.index;
@@ -25,8 +25,40 @@
       if (!knt.Element.steps(next_step)) {
         _saveNewIndexes(horizontal, vertical);
         _updateSlideIndexes();
+        _renderKeyboard(horizontal, vertical);
         knt.Url.write(_index.horizontal, _index.vertical);
       }
+    };
+    _renderKeyboard = function(horizontal, vertical) {
+      var nSlides, nSubSlides;
+      nSlides = knt.Element.slides().length;
+      nSubSlides = knt.Element.subslides(horizontal).length;
+      if (horizontal > 0 && horizontal < (nSlides - 1)) {
+        $$(SELECTOR.KEYBOARD.left).removeClass('enabled').addClass('enabled');
+        $$(SELECTOR.KEYBOARD.right).removeClass('enabled').addClass('enabled');
+      } else if (horizontal <= 0) {
+        $$(SELECTOR.KEYBOARD.left).removeClass('enabled');
+        $$(SELECTOR.KEYBOARD.right).removeClass('enabled').addClass('enabled');
+      } else if (horizontal >= (nSlides - 1)) {
+        $$(SELECTOR.KEYBOARD.left).removeClass('enabled').addClass('enabled');
+        $$(SELECTOR.KEYBOARD.right).removeClass('enabled');
+      }
+      if (!isNaN(nSubSlides) && nSubSlides > 1) {
+        if (vertical > 0 && vertical < (nSubSlides - 1)) {
+          $$(SELECTOR.KEYBOARD.up).removeClass('enabled').addClass('enabled');
+          $$(SELECTOR.KEYBOARD.down).removeClass('enabled').addClass('enabled');
+        } else if (vertical <= 0) {
+          $$(SELECTOR.KEYBOARD.up).removeClass('enabled');
+          $$(SELECTOR.KEYBOARD.down).removeClass('enabled').addClass('enabled');
+        } else if (vertical >= (nSubSlides - 1)) {
+          $$(SELECTOR.KEYBOARD.up).removeClass('enabled').addClass('enabled');
+          $$(SELECTOR.KEYBOARD.down).removeClass('enabled');
+        }
+      } else {
+        $$(SELECTOR.KEYBOARD.up).removeClass('enabled');
+        $$(SELECTOR.KEYBOARD.down).removeClass('enabled');
+      }
+      console.log('horizontal:' + horizontal + '|' + (nSlides - 1) + ' || vertical:' + vertical + '|' + (nSubSlides - 1));
     };
     index = function() {
       return {

@@ -186,9 +186,10 @@ cite {
 
 pre {
 	position: relative;
-	width: 50%;
-	left: 50%;
-	margin: 1% 0% 1% -320px !important;
+	width: 100% / @fi;
+	//left: 100% / (@fi*2);
+	//margin: 1% 0% 1% -(100% / (@fi*2)) !important;
+	margin: 1% auto;
 	padding: 8px;
 	margin-bottom: 16px;
 	.string, .comment.docstring {

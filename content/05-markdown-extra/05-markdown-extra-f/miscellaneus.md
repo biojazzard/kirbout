@@ -15,7 +15,6 @@ Abbreviations
 *[HTML]: Hyper Text Markup Language
 *[W3C]:  World Wide Web Consortium
 ```
-###### Now you can PRESS the *Right* Button
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)
