@@ -1,7 +1,7 @@
 Title: Learn kirb*out*
 ----
 Text:
-###### 5.- Images
+#### 5.- Images
 Inline Images *&lt;img&gt;*
 ```
 *w/ alt*
@@ -11,7 +11,7 @@ Inline Images *&lt;img&gt;*
 
 <img src="/path/file.img" alt="Alt Text">
 ```
-*Simple*
+Simple
 ```
 ![/path/file.img]
 

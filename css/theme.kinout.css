@@ -1,11 +1,7 @@
-body {
-  line-height: 1.5;
-}
-
 .kinout {
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, sans-serif;
   color: #fefefe;
-  background-color: #2e8f65;
+  background-color: #9d261d;
 }
 
 .kinout header,
@@ -25,6 +21,7 @@ body {
 .kinout footer h5 {
   font-size: 20px;
   color: #f1f1f1;
+  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.5);
 }
 
 .kinout header p,
@@ -39,6 +36,7 @@ body {
 
 .kinout mark,
 .kinout em {
+  font-style: normal;
   color: #ffc507;
 }
 
@@ -46,18 +44,78 @@ body {
   background: #ffc507;
 }
 
+.kinout a {
+  color: #5e5e5e;
+  text-decoration: none;
+}
+
+.kinout a:hover,
+.kinout a:active {
+  color: #5e5e5e;
+}
+
+.kinout ol {
+  list-style: decimal;
+  list-style-position: inside;
+}
+
+.kinout li {
+  line-height: 1.2;
+}
+
 .kinout h1,
 .kinout h2,
 .kinout h3,
 .kinout h4,
-.kinout h5,
+.kinout h5 {
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.06em;
+  text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
 .kinout h6 {
-  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.5);
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.kinout h1 {
+  margin-top: 18%;
+  font-size: 6em;
+}
+
+.kinout h2 {
+  font-size: 5em;
+}
+
+.kinout h3 {
+  font-size: 4em;
+}
+
+.kinout h4 {
+  font-size: 3em;
+}
+
+.kinout h5 {
+  font-size: 2em;
+}
+
+.kinout h6 {
+  font-size: 2em;
 }
 
 .kinout p {
-  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  font-size: 19px;
   font-weight: 200;
+  line-height: 1.5;
 }
 
 .kinout hr {
@@ -88,20 +146,6 @@ body {
   border: solid 8px #fefefe;
 }
 
-.kinout .slide-title,
-.kinout .sub-slide-title {
-  position: relative;
-  margin-top: 0;
-  font-size: 16px;
-  font-weight: 200;
-  color: #f1f1f1;
-}
-
-.kinout .copyright {
-  display: none;
-  font-family: 'Comfortaa';
-}
-
 .kinout pre {
   padding: 0;
   padding: 10px;
@@ -111,7 +155,7 @@ body {
   font-size: 14px;
   color: #ffffff;
   word-wrap: break-word;
-  background: #0b1022;
+  background: #030303;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
@@ -167,4 +211,14 @@ body {
 
 .kinout code {
   font-family: 'Monaco', courier, monospace;
+}
+
+.kinout .copyright {
+  position: absolute;
+  right: 1.5%;
+  bottom: 2%;
+  z-index: 1980;
+  display: none;
+  width: 10%;
+  font-family: 'Comfortaa';
 }

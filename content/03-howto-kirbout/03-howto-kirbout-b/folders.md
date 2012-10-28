@@ -1,7 +1,7 @@
 Title: Howto kirb*out*
 ----
 Text:
-###### 3.-Folder names
+#### 3.-Folder names
 *Main slides* (parent)
 Numbered folder containing a *Markdown* file
 ```
@@ -15,10 +15,10 @@ Add Folders with an ordered letter suffix.
 |               | 02-sub-slide-b ----| junior.md (children)
 |               | 02-sub-slide-c ----| senior.md (children)
 ```
-###### (_*.md_ names are not used)
+###### _*.md_ names are not used
 (Use _*.md_ file names as you want)
 * * *
-#### So now PRESS the *Down* Button
+###### So now PRESS the *Down* Button
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

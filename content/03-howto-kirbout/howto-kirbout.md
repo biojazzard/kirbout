@@ -4,7 +4,7 @@ Text:
 # Howto kirb*out*
 ####  About creating and editing Slides.
 * * *
-##### PRESS the *Down* Button
+###### PRESS the *Down* Button
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

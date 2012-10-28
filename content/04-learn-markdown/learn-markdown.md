@@ -4,7 +4,7 @@ Text:
 # Learn *Markdown*
 #### This is basic to work with kirb*out*
 * * *
-##### PRESS the *Down* Button
+###### PRESS the *Down* Button
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

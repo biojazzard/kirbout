@@ -1,7 +1,7 @@
 Title: Learn kirb*out*
 ----
 Text:
-###### 4.- Links & Anchors
+#### 4.- Links & Anchors
 w/ *alt*
 ```
 This is a [link](http://example.com/ "Link Title")

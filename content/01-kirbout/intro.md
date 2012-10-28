@@ -5,7 +5,7 @@ Text:
 #### kinout*JS* & kirby living together
 [not a marriage, but who knows...]
 * * *
-#### So now PRESS the *Right* Button
+###### So now PRESS the *Right* Button
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

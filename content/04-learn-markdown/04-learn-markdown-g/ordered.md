@@ -1,7 +1,7 @@
 Title: Learn kirb*out*
 ----
 Text:
-###### 7.- Lists
+#### 7.- Lists
 Ordered lists *&lt;ol&gt;*
 ```
 1. item 1

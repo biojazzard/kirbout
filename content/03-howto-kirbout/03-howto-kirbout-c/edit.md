@@ -1,10 +1,11 @@
 Title: kirb*out* Howto
 ----
 Text:
-###### 4.-Edit the *.md* files
+#### 4.-Edit the *.md* files
 So, let´s see what we find here:
 
-###### Minimal Config (Only Content)
+##### Minimal Config
+(Only Content)
 <pre>
 Text:
 &#35;&#35; Markdown Header
@@ -17,7 +18,7 @@ Text:
 * * *
 Basically, *Markdown* between the *Text:* and the closing *&#45;&#45;&#45;&#45;*.
 * * *
-#### PRESS the *Down* Button
+###### PRESS the *Down* Button
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

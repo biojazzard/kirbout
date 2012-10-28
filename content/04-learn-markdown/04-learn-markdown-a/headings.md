@@ -1,7 +1,7 @@
 Title: Learn kirb*out*
 ----
 Text:
-###### 1.- Basic Formats
+#### 1.- Basic Formats
 Headings *&lt;h1&gt;*,*&lt;h2&gt;*,...
 ```
 # This is a header 1            renders as ->    <h1>This is a header 1</h1>

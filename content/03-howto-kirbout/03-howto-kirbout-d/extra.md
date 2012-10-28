@@ -1,11 +1,11 @@
 Title: kirb*out* Howto
 ----
 Text:
-###### 5.-Edit the *.md* files
+#### 5.-Edit the *.md* files
 Let´s go for more:
-
-###### Extra Config (Header and/or Footer)
-You can easily add headers and footers per slide, adding the *Header:* and *Footer:*
+##### Extra Config (Header and/or Footer)
+You can easily add headers and footers per slide:
+adding the *Header:* and *Footer:* areas
 <pre>Header:
 ## Nice Header with [links](http://example.com/)
 &#45;&#45;&#45;&#45;
@@ -17,7 +17,7 @@ Footer:
 They can be located anywhere in the document,
 as long as they are properly closed: _&#45;&#45;&#45;&#45;_ !!!
 * * *
-#### PRESS the *Down* Button
+###### PRESS the *Down* Button
 ----
 Header:
 Mashup by [@biojazzard](https://github.com/biojazzard)

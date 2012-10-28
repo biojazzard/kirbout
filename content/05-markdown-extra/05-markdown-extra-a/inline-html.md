@@ -1,7 +1,7 @@
 Title: Learn kirb*out*
 ----
 Text:
-###### 1.- inline *&lt;html&gt;*
+#### 1.- inline *&lt;html&gt;*
 No restrictions to *&lt;div&gt;* *&lt;table&gt;* *&lt;pre&gt;* *&lt;p&gt;*
 
 ```

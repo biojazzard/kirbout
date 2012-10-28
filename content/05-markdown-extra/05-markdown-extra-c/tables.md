@@ -1,7 +1,7 @@
 Title: Learn kirb*out*
 ----
 Text:
-###### 3.- Tables
+#### 3.- Tables
 Tables *&lt;table&gt;*
 <pre>
 | First Header  | Second Header | -> table > th > td [ 2x3 ]

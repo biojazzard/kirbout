@@ -1,7 +1,7 @@
 Title: Learn kirb*out*
 ----
 Text:
-###### 1.- Markdown Inside *&lt;html&gt;* Blocks 
+#### 2.- Markdown Inside *&lt;html&gt;* Blocks 
 Adding *markdown="1"* attr
 ```
 <div markdown="1">

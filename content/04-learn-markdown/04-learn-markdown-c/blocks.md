@@ -1,7 +1,7 @@
 Title: Learn kirb*out*
 ----
 Text:
-###### 3.- Basic Formats
+#### 3.- Basic Formats
 Paragraphs *&lt;p&gt;*
 ```
 Triggered by a

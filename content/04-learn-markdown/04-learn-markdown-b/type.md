@@ -1,7 +1,7 @@
 Title: Learn kirb*out*
 ----
 Text:
-###### 2.- Basic Formats
+#### 2.- Basic Formats
 
 Emphasis *&lt;em&gt;*
 ```
