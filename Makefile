@@ -7,8 +7,8 @@ LESS_COMPRESSOR ?= `which lessc`
 UGLIFY_JS ?= `which uglifyjs`
 WATCHR ?= `which watchr`
 
-#Bower
-CMP=./components/
+# Bower Since 1.2.0 Moved original components to /src
+CMP=./src/
 
 #QUO Related paths
 QUO_SRC=QuoJS/src/
@@ -87,6 +87,6 @@ raf-js:
 	@echo "\n${HR} RAF COMPILER w/ Uglify ${HR}"
 	# OK Compilation to split files
 	coffee --output ${CMP}${RAF_BUILD} --compile ${CMP}${RAF_SRC}Raf.coffee
-	uglifyjs -nc ./src/js/Raf.js > ./src/js/Raf.min.js
+	uglifyjs -nc ${CMP}${RAF_BUILD}Raf.js > ${CMP}${RAF_BUILD}Raf.min.js
 	@echo "\n${HR} RAF COMPILER w/ Uglify ${HR}"
 

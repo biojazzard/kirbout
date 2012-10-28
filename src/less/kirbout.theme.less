@@ -1,8 +1,22 @@
 
 .kirbout {
+
   background-color: @bgcolor;
+
+  & progress span {
+    background: @orange;
+  }
+
+  /*
+   * Typpgraphy ------------------------------------------------------|
+   */
+
   color: @white;
   font-family: @defaultFont;
+
+  /*
+   * header, footer --------------------------------------------------|
+   */
 
   & header,
   & footer {
@@ -24,35 +38,20 @@
     }
   }
 
-  & mark,
-  & em {
-    font-style: normal;
-    color: @orange;
-  }
-
-  & progress span {
-    background: @orange;
-  }
-
-  /*****************************************************************************
-   * Type
-   *****************************************************************************/
+  /*
+   * common ----------------------------------------------------------|
+   */
 
   a {
     text-decoration: none;
-    color: @gray;
-
+    color: @white;
     &:hover, &:active {
-        color: @gray;
+      color: darken(@white, 6%);
+    }
+    &:active {
+      color: darken(@white, 2%);
     }
   }
-
-  ol {
-      list-style: decimal;
-      list-style-position: inside;
-  }
-
-  li { line-height: 1.2; }
 
   h1, h2, h3, h4, h5 {
       margin: 0px;
@@ -90,65 +89,44 @@
     line-height: 1.5;
   }
 
+  & mark,
+  & em {
+    font-style: normal;
+    color: @orange;
+  }
+
+  ol {
+      list-style: decimal;
+      list-style-position: inside;
+  }
+
+  li { line-height: 1.2; }
+
+  // Source Code
+
+  pre {
+    text-align: left;
+    font-size: 14px;
+    font-family: @monoFont;
+    line-height: 150%;
+    word-wrap: break-word;
+    color: @white;
+    background-color: @black;
+    .border-radius(4px);
+    .box-shadow(0px 4px 8px rgba(0,0,0,0.5));
+  }
+
   hr {
     height: 12px;
     border: none;
   }
 
   & .box.white { color: @white; }
-
-  & a {
-    color: rgba(255,255,255,1);
-    &:hover, &:active { color: @white; }
-  }
-
   & .box { .box-shadow(0px 4px 8px rgba(0,0,0,0.5)); }
   & .bordered {
     border: solid 8px @white;
   }
-  pre {
-    .border-radius(4px);
-    .box-shadow(0px 4px 8px rgba(0,0,0,0.5));
-    background: @black;
-    word-wrap:break-word;
-    margin:0px;
-    padding:0px;
-    padding:10px;
-    color:#ffffff;
-    font-size:14px;
-    margin-bottom:20px;
-    font-family: @monoFont;
-    .string, .comment.docstring {
-    color:#61ce3c;
-    }
-    .string.regexp, .support.tag.script, .support.tag.style {
-    color:#ffffff;
-    }
-    .keyword, .selector {
-    color:#fbde2d;
-    }
-    .variable.global, .variable.class, .variable.instance {
-    color:#ff6400;
-    }
-    .comment {
-    color:#727272;
-    }
-    .constant {
-    color:#d8fa3c;
-    }
-    .storage {
-    color:#fbde2d;
-    }
-    .inherited-class {
-    font-style:italic;
-    }
-    .entity {
-    color:#ff6400;
-    }
-  }
-  code {
-    font-family: @monoFont;
-  }
+
   .copyright {
     display: none;
     position: absolute;

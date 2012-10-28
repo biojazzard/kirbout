@@ -1,0 +1,105 @@
+
+
+/* Button */
+
+.button {
+    background-color: @blackLight;
+    min-width: 48px;
+    background-image: -webkit-linear-gradient(hsla(0,0%,100%,.15), hsla(0,0%,0%,0));
+    background-image:    -moz-linear-gradient(hsla(0,0%,100%,.15), hsla(0,0%,0%,0));
+    background-image:     -ms-linear-gradient(hsla(0,0%,100%,.15), hsla(0,0%,0%,0));
+    background-image:      -o-linear-gradient(hsla(0,0%,100%,.15), hsla(0,0%,0%,0));
+    background-image:         linear-gradient(hsla(0,0%,100%,.15), hsla(0,0%,0%,0));
+    border: 1px solid #111;
+    color: #c6c6c6;
+    cursor: pointer;
+    display: inline-block;
+    font: bold 14px/10px sans-serif;
+    margin: 20px;
+    padding: 10px 15px;
+    position: relative;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px hsla(0,0%,0%,.8);
+    vertical-align: top;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    -webkit-box-shadow: 0 1px 4px hsla(0,0%,0%,.4),
+                        inset 0 1px 0 hsla(0,0%,100%,.2);
+       -moz-box-shadow: 0 1px 4px hsla(0,0%,0%,.4),
+                        inset 0 1px 0 hsla(0,0%,100%,.2);
+            box-shadow: 0 1px 4px hsla(0,0%,0%,.4),
+                        inset 0 1px 0 hsla(0,0%,100%,.2);
+
+    &:hover,
+    &:focus {
+        background-color: lighten(@blackLight, 5%);
+        color: #f6f6f6;
+        -webkit-box-shadow: 0 1px 4px hsla(0,0%,0%,.4),
+                            inset 0 1px 0 hsla(0,0%,100%,.2);
+           -moz-box-shadow: 0 1px 4px hsla(0,0%,0%,.4),
+                            inset 0 1px 0 hsla(0,0%,100%,.2);
+                box-shadow: 0 1px 4px hsla(0,0%,0%,.4),
+                            inset 0 1px 0 hsla(0,0%,100%,.2);
+            &:after {
+                display: block;
+            }
+    }
+    &:after {
+        background-image: -webkit-linear-gradient(left, hsla(0,0%,0%,0), hsla(0,0%,100%,.8), hsla(0,0%,0%,0));
+        background-image:    -moz-linear-gradient(left, hsla(0,0%,0%,0), hsla(0,0%,100%,.8), hsla(0,0%,0%,0));
+        background-image:     -ms-linear-gradient(left, hsla(0,0%,0%,0), hsla(0,0%,100%,.8), hsla(0,0%,0%,0));
+        background-image:      -o-linear-gradient(left, hsla(0,0%,0%,0), hsla(0,0%,100%,.8), hsla(0,0%,0%,0));
+        background-image:         linear-gradient(left, hsla(0,0%,0%,0), hsla(0,0%,100%,.8), hsla(0,0%,0%,0));
+        background-position: 50% 0%;
+        background-size: 200% 200%;
+        content: '';
+        display: none;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    &:before {
+        background: @grayDark;
+        bottom: -8px;
+        content: '';
+        left: -8px;
+        position: absolute;
+        right: -8px;
+        top: -8px;
+        z-index: -1;
+        -webkit-border-radius: 6px;
+           -moz-border-radius: 6px;
+                border-radius: 6px;
+        -webkit-box-shadow: 0 1px 1px hsla(0,0%,100%,.3),
+                            inset 0 1px 1px hsla(0,0%,0%,.4),
+                            inset 0 0 5px hsla(0,0%,0%,.2);
+           -moz-box-shadow: 0 1px 1px hsla(0,0%,100%,.3),
+                            inset 0 1px 1px hsla(0,0%,0%,.4),
+                            inset 0 0 5px hsla(0,0%,0%,.2);
+                box-shadow: 0 1px 1px hsla(0,0%,100%,.3),
+                            inset 0 1px 1px hsla(0,0%,0%,.4),
+                            inset 0 0 5px hsla(0,0%,0%,.2);
+    }
+    &:active {
+        background-color: darken(@blackLight, 5%);
+        color: #b6b6b6;
+        padding: 11px 15px 9px;
+        -webkit-box-shadow: 0 1px 0 hsla(0,0%,100%,.1),
+                            inset 0 1px 4px hsla(0,0%,0%,.8);
+           -moz-box-shadow: 0 1px 0 hsla(0,0%,100%,.1),
+                            inset 0 1px 4px hsla(0,0%,0%,.8);
+                box-shadow: 0 1px 0 hsla(0,0%,100%,.1),
+                            inset 0 1px 4px hsla(0,0%,0%,.8);
+        &:after {
+            display: block;
+            left: 1px;
+            opacity: 0.5;
+            right: 1px;
+            top: 31px;
+        }
+    }
+}
+​

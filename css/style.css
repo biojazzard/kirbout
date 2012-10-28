@@ -297,6 +297,10 @@ body {
   background-color: #2e8f65;
 }
 
+.kirbout progress span {
+  background: #ffc507;
+}
+
 .kirbout header,
 .kirbout footer {
   font-weight: 200;
@@ -327,33 +331,18 @@ body {
   color: #ffcb21;
 }
 
-.kirbout mark,
-.kirbout em {
-  font-style: normal;
-  color: #ffc507;
-}
-
-.kirbout progress span {
-  background: #ffc507;
-}
-
 .kirbout a {
-  color: #5e5e5e;
+  color: #fefefe;
   text-decoration: none;
 }
 
 .kirbout a:hover,
 .kirbout a:active {
-  color: #5e5e5e;
+  color: #efefef;
 }
 
-.kirbout ol {
-  list-style: decimal;
-  list-style-position: inside;
-}
-
-.kirbout li {
-  line-height: 1.2;
+.kirbout a:active {
+  color: #f9f9f9;
 }
 
 .kirbout h1,
@@ -411,21 +400,46 @@ body {
   line-height: 1.5;
 }
 
+.kirbout mark,
+.kirbout em {
+  font-style: normal;
+  color: #ffc507;
+}
+
+.kirbout ol {
+  list-style: decimal;
+  list-style-position: inside;
+}
+
+.kirbout li {
+  line-height: 1.2;
+}
+
+.kirbout pre {
+  font-family: 'Monaco', courier, monospace;
+  font-size: 14px;
+  line-height: 150%;
+  color: #fefefe;
+  text-align: left;
+  word-wrap: break-word;
+  background-color: #0b1022;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
+}
+
 .kirbout hr {
   height: 12px;
   border: none;
 }
 
 .kirbout .box.white {
-  color: #fefefe;
-}
-
-.kirbout a {
-  color: #ffffff;
-}
-
-.kirbout a:hover,
-.kirbout a:active {
   color: #fefefe;
 }
 
@@ -439,73 +453,6 @@ body {
   border: solid 8px #fefefe;
 }
 
-.kirbout pre {
-  padding: 0;
-  padding: 10px;
-  margin: 0;
-  margin-bottom: 20px;
-  font-family: 'Monaco', courier, monospace;
-  font-size: 14px;
-  color: #ffffff;
-  word-wrap: break-word;
-  background: #030303;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-     -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  -webkit-background-clip: padding-box;
-     -moz-background-clip: padding;
-          background-clip: padding-box;
-}
-
-.kirbout pre .string,
-.kirbout pre .comment.docstring {
-  color: #61ce3c;
-}
-
-.kirbout pre .string.regexp,
-.kirbout pre .support.tag.script,
-.kirbout pre .support.tag.style {
-  color: #ffffff;
-}
-
-.kirbout pre .keyword,
-.kirbout pre .selector {
-  color: #fbde2d;
-}
-
-.kirbout pre .variable.global,
-.kirbout pre .variable.class,
-.kirbout pre .variable.instance {
-  color: #ff6400;
-}
-
-.kirbout pre .comment {
-  color: #727272;
-}
-
-.kirbout pre .constant {
-  color: #d8fa3c;
-}
-
-.kirbout pre .storage {
-  color: #fbde2d;
-}
-
-.kirbout pre .inherited-class {
-  font-style: italic;
-}
-
-.kirbout pre .entity {
-  color: #ff6400;
-}
-
-.kirbout code {
-  font-family: 'Monaco', courier, monospace;
-}
-
 .kirbout .copyright {
   position: absolute;
   right: 1.5%;
@@ -513,6 +460,99 @@ body {
   z-index: 1980;
   display: none;
   width: 10%;
+}
+
+/* Button */
+
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 20px;
+  font: bold 14px/10px sans-serif;
+  color: #c6c6c6;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.8);
+  vertical-align: top;
+  cursor: pointer;
+  background-color: #222;
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0));
+  background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0));
+  border: 1px solid #111;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.button:hover,
+.button:focus {
+  color: #f6f6f6;
+  background-color: #242424;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.button:hover:after,
+.button:focus:after {
+  display: block;
+}
+
+.button:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0));
+  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0));
+  background-position: 50% 0;
+  background-size: 200% 200%;
+  content: '';
+}
+
+.button:before {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  z-index: -1;
+  background: #363636;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  content: '';
+  -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3), inset 0 1px 1px rgba(0, 0, 0, 0.4), inset 0 0 5px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3), inset 0 1px 1px rgba(0, 0, 0, 0.4), inset 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3), inset 0 1px 1px rgba(0, 0, 0, 0.4), inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  padding: 11px 15px 9px;
+  color: #b6b6b6;
+  background-color: #202020;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 1px 4px rgba(0, 0, 0, 0.8);
+     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 1px 4px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.button:active:after {
+  top: 31px;
+  right: 1px;
+  left: 1px;
+  display: block;
+  opacity: .5;
 }
 
 /*****************************************************************************
@@ -848,20 +888,57 @@ cite {
   width: 21.05%;
 }
 
-/*****************************************************************************
- * Source Code
- *****************************************************************************/
-
 pre {
   position: relative;
   left: 50%;
-  width: 640px;
-  padding: 0;
+  width: 50%;
+  padding: 8px;
   margin: 1% 0 1% -320px !important;
-  font-size: 14px;
-  line-height: 150%;
-  color: #fefefe;
-  text-align: left;
-  word-wrap: break-word;
-  background: #0B1022;
+  margin-bottom: 16px;
+}
+
+pre .string,
+pre .comment.docstring {
+  color: #61ce3c;
+}
+
+pre .string.regexp,
+pre .support.tag.script,
+pre .support.tag.style {
+  color: #ffffff;
+}
+
+pre .keyword,
+pre .selector {
+  color: #fbde2d;
+}
+
+pre .variable.global,
+pre .variable.class,
+pre .variable.instance {
+  color: #ff6400;
+}
+
+pre .comment {
+  color: #727272;
+}
+
+pre .constant {
+  color: #d8fa3c;
+}
+
+pre .storage {
+  color: #fbde2d;
+}
+
+pre .inherited-class {
+  font-style: italic;
+}
+
+pre .entity {
+  color: #ff6400;
+}
+
+code {
+  font-family: 'Monaco', courier, monospace;
 }

@@ -2,52 +2,52 @@
  * Classes
  *****************************************************************************/
 .kirbout {
-    & mark {
-        background: none;
-        color: @grayLighter;
-    }
+	& mark {
+			background: none;
+			color: @grayLighter;
+	}
 
-    & .progress {
-        position: absolute;
-        width: 100%;
-        height: 4px;
-        bottom: 0px;
-        z-index: 1980;
+	& .progress {
+		position: absolute;
+		width: 100%;
+		height: 4px;
+		bottom: 0px;
+		z-index: 1980;
 
-        & span {
-            display: block;
-            float: left;
-            width: 0%;
-            height: 4px;
-            background: rgba(0,0,0,0.75);
+		& span {
+			display: block;
+			float: left;
+			width: 0%;
+			height: 4px;
+			background: rgba(0,0,0,0.75);
 
-            .transition(all, 600ms, @easeOutCubic);
-        }
+			.transition(all, 600ms, @easeOutCubic);
+		}
 
-        &.vertical {
-            width: 6px;
-            height: 100%;
-            top: 0px;
-            left: none;
-            right: -2px;
-            bottom: none;
+		&.vertical {
+			width: 6px;
+			height: 100%;
+			top: 0px;
+			left: none;
+			right: -2px;
+			bottom: none;
 
-            & span { width: 6px; height: 0%; }
-        }
-    }
+			& span { width: 6px; height: 0%; }
+		}
+	}
 
-    & .box {
-        background: rgba(0,0,0,0.5);
-        color: @white;
-        &.white {
-            background: rgba(255,255,255,0.2);
-            color: @gray;
-        }
-    }
+	& .box {
+		background: rgba(0,0,0,0.5);
+		color: @white;
+		&.white {
+				background: rgba(255,255,255,0.2);
+				color: @gray;
+		}
+	}
 
-    & .left { float: left; }
-    & .right { float: right; }
-    & .center { margin: 0 auto; }
+	& .left { float: left; }
+	& .right { float: right; }
+	& .center { margin: 0 auto; }
 }
 
 
@@ -55,38 +55,38 @@
  * [data-step]
  *****************************************************************************/
 [data-step] {
-    opacity: 0;
-    .transition(all 500ms @defaultTrasition);
-    &[data-run="success"] { opacity: 100; }
+	opacity: 0;
+	.transition(all 500ms @defaultTrasition);
+	&[data-run="success"] { opacity: 100; }
 }
 
-    [data-step="boom"] {
-        .transform(scale(0));
-        &[data-run="success"] {
-            .transform(scale(1));
-            -webkit-animation: BOOM 600ms;
-        }
-    }
+[data-step="boom"] {
+		.transform(scale(0));
+		&[data-run="success"] {
+				.transform(scale(1));
+				-webkit-animation: BOOM 600ms;
+		}
+}
 
-    [data-step="zoom"] {
-        .transform(scale(2));
-        &[data-run="success"] { .transform(scale(1)); }
-    }
-        @-webkit-keyframes BOOM {
-            0% { .transform(scale(0)); }
-            25% { .transform(scale(1.5)); }
-            100% { .transform(scale(1)); }
-        }
+[data-step="zoom"] {
+		.transform(scale(2));
+		&[data-run="success"] { .transform(scale(1)); }
+}
+		@-webkit-keyframes BOOM {
+				0% { .transform(scale(0)); }
+				25% { .transform(scale(1.5)); }
+				100% { .transform(scale(1)); }
+		}
 
-    [data-step="move"] {
-        .transform(translateX(100%));
-        &[data-run="success"] { .transform(translateX(0%)); }
-    }
+[data-step="move"] {
+		.transform(translateX(100%));
+		&[data-run="success"] { .transform(translateX(0%)); }
+}
 
-    [data-step="move alternate"] {
-        .transform(translateX(-100%));
-        &[data-run="success"] { .transform(translateX(0%)); }
-    }
+[data-step="move alternate"] {
+		.transform(translateX(-100%));
+		&[data-run="success"] { .transform(translateX(0%)); }
+}
 
 
 /*****************************************************************************
@@ -95,10 +95,10 @@
 .bordered { border: solid 8px @grayLighter; }
 
 .glow {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    .radial-gradient(~'50% 50%,', circle, ~',rgba(255,255,255,0.1) 0%', ~',rgba(0,0,0,0.2) 90%');
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	.radial-gradient(~'50% 50%,', circle, ~',rgba(255,255,255,0.1) 0%', ~',rgba(0,0,0,0.2) 90%');
  }
 
 .size_128 { height: 128px; }
@@ -107,20 +107,20 @@
 .size_400 { height: 440px; }
 
 .text {
-    line-height: 1.0em;
-    &.size07 { font-size: 0.7em; }
-    &.size08 { font-size: 0.8em; }
-    &.size09 { font-size: 0.9em; }
-    &.size1 { font-size: 1.1em; }
-    &.size2 { font-size: 1.2em; }
-    &.size3 { font-size: 1.3em; }
-    &.size4 { font-size: 1.4em; }
-    &.size5 { font-size: 1.5em; }
-    &.size6 { font-size: 1.6em; }
-    &.size7 { font-size: 1.7em; }
-    &.size8 { font-size: 1.8em; }
-    &.size9 { font-size: 1.9em; }
-    &.size10 { font-size: 2.0em; }
+	line-height: 1.0em;
+	&.size07 { font-size: 0.7em; }
+	&.size08 { font-size: 0.8em; }
+	&.size09 { font-size: 0.9em; }
+	&.size1 { font-size: 1.1em; }
+	&.size2 { font-size: 1.2em; }
+	&.size3 { font-size: 1.3em; }
+	&.size4 { font-size: 1.4em; }
+	&.size5 { font-size: 1.5em; }
+	&.size6 { font-size: 1.6em; }
+	&.size7 { font-size: 1.7em; }
+	&.size8 { font-size: 1.8em; }
+	&.size9 { font-size: 1.9em; }
+	&.size10 { font-size: 2.0em; }
 }
 
 
@@ -128,76 +128,98 @@
  * Blockquote
  *****************************************************************************/
 blockquote {
-    margin-top: 25%;
-    quotes: "\201C" "\201D";
+	margin-top: 25%;
+	quotes: "\201C" "\201D";
 
-    background: inherit;
-    background: rgba(0,0,0,0.1);
-    padding: 32px 16px;
-    font-size: 1.4em;
-    line-height: 1.2em;
-    font-weight: bold;
+	background: inherit;
+	background: rgba(0,0,0,0.1);
+	padding: 32px 16px;
+	font-size: 1.4em;
+	line-height: 1.2em;
+	font-weight: bold;
 
-    &:before{
-        margin-right: 8px;
-        content: open-quote;
-        opacity: 0.5;
-        font-size: 1.25em;
-    }
+	&:before{
+		margin-right: 8px;
+		content: open-quote;
+		opacity: 0.5;
+		font-size: 1.25em;
+	}
 
-    &:after {
-        margin-left: 8px;
-        content: close-quote;
-        opacity: 0.5;
-        font-size: 1.25em;
-    }
+	&:after {
+		margin-left: 8px;
+		content: close-quote;
+		opacity: 0.5;
+		font-size: 1.25em;
+	}
 }
-    [data-image] blockquote {
-        background: rgba(0,0,0,0.65);
-        color: @white;
-    }
+
+[data-image] blockquote {
+	background: rgba(0,0,0,0.65);
+	color: @white;
+}
 
 cite {
-    float: right;
-    padding: 16px;
-    font-size: 0.9em;
-    font-style: italic;
-    font-weight: bold;
-    opacity: 0.9;
+	float: right;
+	padding: 16px;
+	font-size: 0.9em;
+	font-style: italic;
+	font-weight: bold;
+	opacity: 0.9;
 }
-    [data-image] cite {
-        color: @white;
-        text-shadow: 0px 1px 0px rgba(0,0,0,0.75);
-    }
+[data-image] cite {
+	color: @white;
+	text-shadow: 0px 1px 0px rgba(0,0,0,0.75);
+}
 
 /*****************************************************************************
  * Columns
  *****************************************************************************/
 .column {
-    display: inline-block;
-    top: 0px;
-    margin: 0% 1%;
+	display: inline-block;
+	top: 0px;
+	margin: 0% 1%;
 
-    &.big { width: 44.9%; }
-    &.medium { width: 29%; }
-    &.small { width: 21.05%; }
+	&.big { width: 44.9%; }
+	&.medium { width: 29%; }
+	&.small { width: 21.05%; }
 }
 
-/*****************************************************************************
- * Source Code
- *****************************************************************************/
 pre {
-    position: relative;
-    width: 640px;
-    left: 50%;
-    margin: 1% 0% 1% -320px !important;
-    padding: 0px;
+	position: relative;
+	width: 50%;
+	left: 50%;
+	margin: 1% 0% 1% -320px !important;
+	padding: 8px;
+	margin-bottom: 16px;
+	.string, .comment.docstring {
+	color:#61ce3c;
+	}
+	.string.regexp, .support.tag.script, .support.tag.style {
+	color:#ffffff;
+	}
+	.keyword, .selector {
+	color:#fbde2d;
+	}
+	.variable.global, .variable.class, .variable.instance {
+	color:#ff6400;
+	}
+	.comment {
+	color:#727272;
+	}
+	.constant {
+	color:#d8fa3c;
+	}
+	.storage {
+	color:#fbde2d;
+	}
+	.inherited-class {
+	font-style:italic;
+	}
+	.entity {
+	color:#ff6400;
+	}
+}
 
-    background: #0B1022;
-    color: @white;
-
-    text-align: left;
-    font-size: 14px;
-    line-height: 150%;
-    word-wrap: break-word;
+code {
+		font-family: @monoFont;
 }

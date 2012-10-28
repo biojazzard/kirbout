@@ -1,3 +1,6 @@
+### 1.2.1 (28 Oct 2012)
+    * Moved al Sources to /src indep. /components
+
 ### 1.2.0 (28 Oct 2012)
     * Moved to a kirbout namespace.
 
