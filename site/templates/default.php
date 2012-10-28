@@ -4,7 +4,7 @@ snippet('header');
 //snippet('submenu');
 ?>
 <body>
-  <div class="kinout">
+  <div class="kirbout">
       <?php foreach($pages->visible() AS $mainItem): ?>
       <section class="content">
         <?php if ($mainItem->title()->value != '' && $mainItem->text()->value != ''): ?>

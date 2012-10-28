@@ -1446,9 +1446,9 @@
       }
     },
     SELECTOR: {
-      KINOUT: ".kinout",
-      SLIDE: ".kinout>section",
-      SUBSLIDE: ".kinout>section.present>article",
+      KINOUT: ".kirbout",
+      SLIDE: ".kirbout>section",
+      SUBSLIDE: ".kirbout>section.present>article",
       STEP: "section.present > article.present [data-step]",
       STEP_TO_SHOW: ":not([data-run='success'])",
       STEP_TO_HIDE: "[data-run='success']",

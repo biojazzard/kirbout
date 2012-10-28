@@ -1,6 +1,6 @@
 {
   "name": "kirbout",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "main": ["./css/style.min.css", "./js/script.min.js", "./img/dot-a.png"],
   "dependencies": {
     "Kinout": {
@@ -19,6 +19,12 @@
       "source": {
         "type": "git",
         "url": "git://github.com/michelf/php-markdown.git"
+      }
+    },
+    "php-markdown": {
+      "source": {
+        "type": "git",
+        "url": "git://github.com/biojazzard/raf-coffeescript.git"
       }
     }
   }
