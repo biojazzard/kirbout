@@ -2,7 +2,7 @@ Title: Learn kirb*out*
 ----
 Text:
 #### 4.- Definition *Lists*
-Tables *&lt;dl&gt;, &lt;dt&gt;*
+Difinitions & Terms *&lt;dl&gt;, &lt;dt&gt;*
 <pre>
 Term 1
 
