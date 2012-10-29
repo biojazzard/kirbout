@@ -1443,18 +1443,25 @@
       PROGRESS: {
         horizontal: "<div class='progress horizontal' value='0' max='100'><span></span></div>",
         vertical: "<div class='progress vertical' value='0' max='100'><span></span></div>"
-      }
+      },
+      KEYBOARD: "<div class='keyboard'><div class='btn-group'><button class='btn spacer'>&nbsp;</button><button class='btn up'>Up &uarr;</button><button class='btn spacer'>&nbsp;</button></div><div class='btn-group'><button class='btn left'>&larr; Left</button><button class='btn down'>Down &darr;</button><button class='btn right'>Right &rarr;</button></div></div>"
     },
     SELECTOR: {
-      KINOUT: ".kinout",
-      SLIDE: ".kinout>section",
-      SUBSLIDE: ".kinout>section.present>article",
+      KINOUT: ".kirbout",
+      SLIDE: ".kirbout>section",
+      SUBSLIDE: ".kirbout>section.present>article",
       STEP: "section.present > article.present [data-step]",
       STEP_TO_SHOW: ":not([data-run='success'])",
       STEP_TO_HIDE: "[data-run='success']",
       PROGRESS: {
         horizontal: ".progress.horizontal",
         vertical: ".progress.vertical"
+      },
+      KEYBOARD: {
+        left: ".btn.left",
+        right: ".btn.right",
+        up: ".btn.up",
+        down: ".btn.down"
       }
     },
     STYLE: {
@@ -1480,7 +1487,7 @@
 (function() {
 
   KINOUT.Element = (function(knt, undefined_) {
-    var MARKUP, SELECTOR, init, progress, slides, steps, subslides, _el, _nextStep, _previousStep;
+    var MARKUP, SELECTOR, init, progress, slides, steps, subslides, _down, _el, _left, _nextStep, _previousStep, _right, _up;
     SELECTOR = knt.Constants.SELECTOR;
     MARKUP = knt.Constants.MARKUP;
     _el = {
@@ -1497,7 +1504,7 @@
       if (config.template) {
         _el.parent.addClass(config.template);
       }
-      return _el.parent.prepend(MARKUP.GLOW).append(MARKUP.COPYRIGHT);
+      return _el.parent.prepend(MARKUP.GLOW).append(MARKUP.KEYBOARD);
     };
     slides = function() {
       if (!(_el.slides.length > 0)) {
@@ -1514,6 +1521,18 @@
       } else {
         return _previousStep();
       }
+    };
+    _left = function() {
+      return $$(SELECTOR.KEYBOARD.left);
+    };
+    _right = function() {
+      return $$(SELECTOR.KEYBOARD.right);
+    };
+    _up = function() {
+      return $$(SELECTOR.KEYBOARD.up);
+    };
+    _down = function() {
+      return $$(SELECTOR.KEYBOARD.down);
     };
     progress = function(type, value) {
       var property;
@@ -1715,26 +1734,18 @@
     _left = function() {
       _index.horizontal--;
       knt.View.slide(_index.horizontal, 0, false);
-      console.log(_index.horizontal);
-      console.log(_index.vertical);
     };
     _right = function() {
       _index.horizontal++;
       knt.View.slide(_index.horizontal, 0);
-      console.log(_index.horizontal);
-      console.log(_index.vertical);
     };
     _up = function() {
       _index.vertical--;
       knt.View.slide(_index.horizontal, _index.vertical, false);
-      console.log(_index.horizontal);
-      console.log(_index.vertical);
     };
     _down = function() {
       _index.vertical++;
       knt.View.slide(_index.horizontal, _index.vertical);
-      console.log(_index.horizontal);
-      console.log(_index.vertical);
     };
     return {
       direction: direction
@@ -1841,7 +1852,7 @@
 (function() {
 
   KINOUT.View = (function(knt, $$, undefined_) {
-    var SELECTOR, STYLE, index, render, slide, _index, _saveNewIndexes, _steps, _updateProgress, _updateSlideIndexes, _updateSlides;
+    var SELECTOR, STYLE, index, render, slide, _index, _renderKeyboard, _saveNewIndexes, _steps, _updateProgress, _updateSlideIndexes, _updateSlides;
     SELECTOR = knt.Constants.SELECTOR;
     STYLE = knt.Constants.STYLE;
     _index = knt.index;
@@ -1853,8 +1864,40 @@
       if (!knt.Element.steps(next_step)) {
         _saveNewIndexes(horizontal, vertical);
         _updateSlideIndexes();
+        _renderKeyboard(horizontal, vertical);
         knt.Url.write(_index.horizontal, _index.vertical);
       }
+    };
+    _renderKeyboard = function(horizontal, vertical) {
+      var nSlides, nSubSlides;
+      nSlides = knt.Element.slides().length;
+      nSubSlides = knt.Element.subslides(horizontal).length;
+      if (horizontal > 0 && horizontal < (nSlides - 1)) {
+        $$(SELECTOR.KEYBOARD.left).removeClass('enabled').addClass('enabled');
+        $$(SELECTOR.KEYBOARD.right).removeClass('enabled').addClass('enabled');
+      } else if (horizontal <= 0) {
+        $$(SELECTOR.KEYBOARD.left).removeClass('enabled');
+        $$(SELECTOR.KEYBOARD.right).removeClass('enabled').addClass('enabled');
+      } else if (horizontal >= (nSlides - 1)) {
+        $$(SELECTOR.KEYBOARD.left).removeClass('enabled').addClass('enabled');
+        $$(SELECTOR.KEYBOARD.right).removeClass('enabled');
+      }
+      if (!isNaN(nSubSlides) && nSubSlides > 1) {
+        if (vertical > 0 && vertical < (nSubSlides - 1)) {
+          $$(SELECTOR.KEYBOARD.up).removeClass('enabled').addClass('enabled');
+          $$(SELECTOR.KEYBOARD.down).removeClass('enabled').addClass('enabled');
+        } else if (vertical <= 0) {
+          $$(SELECTOR.KEYBOARD.up).removeClass('enabled');
+          $$(SELECTOR.KEYBOARD.down).removeClass('enabled').addClass('enabled');
+        } else if (vertical >= (nSubSlides - 1)) {
+          $$(SELECTOR.KEYBOARD.up).removeClass('enabled').addClass('enabled');
+          $$(SELECTOR.KEYBOARD.down).removeClass('enabled');
+        }
+      } else {
+        $$(SELECTOR.KEYBOARD.up).removeClass('enabled');
+        $$(SELECTOR.KEYBOARD.down).removeClass('enabled');
+      }
+      console.log('horizontal:' + horizontal + '|' + (nSlides - 1) + ' || vertical:' + vertical + '|' + (nSubSlides - 1));
     };
     index = function() {
       return {
@@ -1915,76 +1958,22 @@
   })(KINOUT, Quo);
 
 }).call(this);
-/* Rainbow v1.1.8 rainbowco.de */
-window.Rainbow=function(){function q(a){var b,c=a.getAttribute&&a.getAttribute("data-language")||0;if(!c){a=a.attributes;for(b=0;b<a.length;++b)if("data-language"===a[b].nodeName)return a[b].nodeValue}return c}function B(a){var b=q(a)||q(a.parentNode);if(!b){var c=/\blang(?:uage)?-(\w+)/;(a=a.className.match(c)||a.parentNode.className.match(c))&&(b=a[1])}return b}function C(a,b){for(var c in e[d]){c=parseInt(c,10);if(a==c&&b==e[d][c]?0:a<=c&&b>=e[d][c])delete e[d][c],delete j[d][c];if(a>=c&&a<e[d][c]||
-b>c&&b<e[d][c])return!0}return!1}function r(a,b){return'<span class="'+a.replace(/\./g," ")+(l?" "+l:"")+'">'+b+"</span>"}function s(a,b,c,h){var f=a.exec(c);if(f){++t;!b.name&&"string"==typeof b.matches[0]&&(b.name=b.matches[0],delete b.matches[0]);var k=f[0],i=f.index,u=f[0].length+i,g=function(){function f(){s(a,b,c,h)}t%100>0?f():setTimeout(f,0)};if(C(i,u))g();else{var m=v(b.matches),l=function(a,c,h){if(a>=c.length)h(k);else{var d=f[c[a]];if(d){var e=b.matches[c[a]],i=e.language,g=e.name&&e.matches?
-e.matches:e,j=function(b,d,e){var i;i=0;var g;for(g=1;g<c[a];++g)f[g]&&(i=i+f[g].length);d=e?r(e,d):d;k=k.substr(0,i)+k.substr(i).replace(b,d);l(++a,c,h)};i?n(d,i,function(a){j(d,a)}):typeof e==="string"?j(d,d,e):w(d,g.length?g:[g],function(a){j(d,a,e.matches?e.name:0)})}else l(++a,c,h)}};l(0,m,function(a){b.name&&(a=r(b.name,a));if(!j[d]){j[d]={};e[d]={}}j[d][i]={replace:f[0],"with":a};e[d][i]=u;g()})}}else h()}function v(a){var b=[],c;for(c in a)a.hasOwnProperty(c)&&b.push(c);return b.sort(function(a,
-b){return b-a})}function w(a,b,c){function h(b,k){k<b.length?s(b[k].pattern,b[k],a,function(){h(b,++k)}):D(a,function(a){delete j[d];delete e[d];--d;c(a)})}++d;h(b,0)}function D(a,b){function c(a,b,h,e){if(h<b.length){++x;var g=b[h],l=j[d][g],a=a.substr(0,g)+a.substr(g).replace(l.replace,l["with"]),g=function(){c(a,b,++h,e)};0<x%250?g():setTimeout(g,0)}else e(a)}var h=v(j[d]);c(a,h,0,b)}function n(a,b,c){var d=m[b]||[],f=m[y]||[],b=z[b]?d:d.concat(f);w(a.replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/&(?![\w\#]+;)/g,
-"&amp;"),b,c)}function o(a,b,c){if(b<a.length){var d=a[b],f=B(d);return!(-1<(" "+d.className+" ").indexOf(" rainbow "))&&f?(f=f.toLowerCase(),d.className+=d.className?" rainbow":"rainbow",n(d.innerHTML,f,function(k){d.innerHTML=k;j={};e={};p&&p(d,f);setTimeout(function(){o(a,++b,c)},0)})):o(a,++b,c)}c&&c()}function A(a,b){var a=a&&"function"==typeof a.getElementsByTagName?a:document,c=a.getElementsByTagName("pre"),d=a.getElementsByTagName("code"),f,e=[];for(f=0;f<d.length;++f)e.push(d[f]);for(f=0;f<
-c.length;++f)c[f].getElementsByTagName("code").length||e.push(c[f]);o(e,0,b)}var j={},e={},m={},z={},d=0,y=0,t=0,x=0,l,p;return{extend:function(a,b,c){1==arguments.length&&(b=a,a=y);z[a]=c;m[a]=b.concat(m[a]||[])},b:function(a){p=a},a:function(a){l=a},color:function(a,b,c){if("string"==typeof a)return n(a,b,c);if("function"==typeof a)return A(0,a);A(a,b)}}}();window.addEventListener?window.addEventListener("load",Rainbow.color,!1):window.attachEvent("onload",Rainbow.color);Rainbow.onHighlight=Rainbow.b;
-Rainbow.addClass=Rainbow.a;/**
- * Generic language patterns
- *
- * @author Craig Campbell
- * @version 1.0.9
- */
-Rainbow.extend([
-    {
-        'matches': {
-            1: {
-                'name': 'keyword.operator',
-                'pattern': /\=/g
-            },
-            2: {
-                'name': 'string',
-                'matches': {
-                    'name': 'constant.character.escape',
-                    'pattern': /\\('|"){1}/g
-                }
-            }
-        },
-        'pattern': /(\(|\s|\[|\=|:)(('|")([^\\\1]|\\.)*?(\3))/gm
-    },
-    {
-        'name': 'comment',
-        'pattern': /\/\*[\s\S]*?\*\/|(\/\/|\#)[\s\S]*?$/gm
-    },
-    {
-        'name': 'constant.numeric',
-        'pattern': /\b(\d+(\.\d+)?(e(\+|\-)?\d+)?(f|d)?|0x[\da-f]+)\b/gi
-    },
-    {
-        'matches': {
-            1: 'keyword'
-        },
-        'pattern': /\b(and|array|as|bool(ean)?|c(atch|har|lass|onst)|d(ef|elete|o(uble)?)|e(cho|lse(if)?|xit|xtends|xcept)|f(inally|loat|or(each)?|unction)|global|if|import|int(eger)?|long|new|object|or|pr(int|ivate|otected)|public|return|self|st(ring|ruct|atic)|switch|th(en|is|row)|try|(un)?signed|var|void|while)(?=\(|\b)/gi
-    },
-    {
-        'name': 'constant.language',
-        'pattern': /true|false|null/g
-    },
-    {
-        'name': 'keyword.operator',
-        'pattern': /\+|\!|\-|&(gt|lt|amp);|\||\*|\=/g
-    },
-    {
-        'matches': {
-            1: 'function.call'
-        },
-        'pattern': /(\w+?)(?=\()/g
-    },
-    {
-        'matches': {
-            1: 'storage.function',
-            2: 'entity.name.function'
-        },
-        'pattern': /(function)\s(.*?)(?=\()/g
-    }
-]);
+// Generated by CoffeeScript 1.4.0
+
 /*
-    QuoJS 2.0
-    http://quojs.tapquo.com
+ * Description or Responsability
+ *
+ * @namespace KINOUT
+ * @class Boot
+ *
+ * @author Javier Jimenez Villar <javi@tapquo.com> || @soyjavi
 */
-$$(document).ready(function() {
+
+
+(function() {
+
+  $$(document).ready(function() {
     KINOUT.init();
-});
+  });
+
+}).call(this);
